@@ -75,6 +75,38 @@ I18n.getValueName = function (category, value) {
         || (typeof resultsMapping !== 'undefined' && resultsMapping[category]?.[value])
         || value.replace(/_/g, ' ');
 };
+const HV_CREDITS = {
+    en: {
+        creditsTitle: 'Credits',
+        creditsLineage: 'HyperValuesForked is maintained by <a href="https://github.com/ArtEgre">ArtEgre</a>. It is a fork of <a href="https://github.com/hyperzen2773/Hypervalues">HyperValues by hyperzen2773</a>, based on the original <a href="https://github.com/neomediavalist/neovalues">NeoValues by neomediavalist</a>. The quiz continues the upstream CC BY-NC-SA 4.0 license, reproduced below.',
+        creditsAssets: 'Credit for inherited questions, translations, code and artwork remains with their authors. Individual icon source links and AI-generated labels are preserved on the value pages. Quicksand and Nunito are by their respective project authors and are served through Google Fonts under the SIL Open Font License 1.1.',
+        creditsDetails: 'Full credits and icon sources',
+        upstreamSupportCredit: 'This appeal is reproduced from <a href="https://github.com/neomediavalist/neovalues">NeoValues by neomediavalist</a>. First-person statements below refer to that author.'
+    },
+    uk: {
+        creditsTitle: 'Автори',
+        creditsLineage: 'HyperValuesForked підтримує <a href="https://github.com/ArtEgre">ArtEgre</a>. Це форк <a href="https://github.com/hyperzen2773/Hypervalues">HyperValues від hyperzen2773</a>, заснованого на оригінальному <a href="https://github.com/neomediavalist/neovalues">NeoValues від neomediavalist</a>. Тест зберігає вихідну ліцензію CC BY-NC-SA 4.0, наведену нижче.',
+        creditsAssets: 'Авторство успадкованих запитань, перекладів, коду та зображень належить їхнім авторам. Посилання на джерела іконок і позначки створення ШІ збережено на сторінках цінностей. Quicksand і Nunito створені авторами відповідних проєктів і надаються через Google Fonts за ліцензією SIL Open Font License 1.1.',
+        creditsDetails: 'Повний список авторів і джерел іконок',
+        upstreamSupportCredit: 'Це звернення відтворено з <a href="https://github.com/neomediavalist/neovalues">NeoValues від neomediavalist</a>. Висловлювання від першої особи нижче належать цьому автору.'
+    },
+    ru: {
+        creditsTitle: 'Авторы',
+        creditsLineage: 'HyperValuesForked поддерживает <a href="https://github.com/ArtEgre">ArtEgre</a>. Это форк <a href="https://github.com/hyperzen2773/Hypervalues">HyperValues от hyperzen2773</a>, основанного на оригинальном <a href="https://github.com/neomediavalist/neovalues">NeoValues от neomediavalist</a>. Тест сохраняет исходную лицензию CC BY-NC-SA 4.0, приведённую ниже.',
+        creditsAssets: 'Авторство унаследованных вопросов, переводов, кода и изображений принадлежит их авторам. Ссылки на источники иконок и отметки создания ИИ сохранены на страницах ценностей. Quicksand и Nunito созданы авторами соответствующих проектов и предоставляются через Google Fonts по лицензии SIL Open Font License 1.1.',
+        creditsDetails: 'Полный список авторов и источников иконок',
+        upstreamSupportCredit: 'Это обращение воспроизведено из <a href="https://github.com/neomediavalist/neovalues">NeoValues от neomediavalist</a>. Высказывания от первого лица ниже принадлежат этому автору.'
+    },
+    de: {
+        creditsTitle: 'Mitwirkende',
+        creditsLineage: 'HyperValuesForked wird von <a href="https://github.com/ArtEgre">ArtEgre</a> betreut. Es ist ein Fork von <a href="https://github.com/hyperzen2773/Hypervalues">HyperValues von hyperzen2773</a>, das auf dem ursprünglichen <a href="https://github.com/neomediavalist/neovalues">NeoValues von neomediavalist</a> basiert. Das Quiz behält die ursprüngliche Lizenz CC BY-NC-SA 4.0 bei, die unten wiedergegeben wird.',
+        creditsAssets: 'Übernommene Fragen, Übersetzungen, Code und Grafiken bleiben ihren jeweiligen Urhebern zugeschrieben. Quellenlinks für Symbole und Kennzeichnungen für KI-generierte Bilder bleiben auf den Werteseiten erhalten. Quicksand und Nunito stammen von ihren jeweiligen Projektautoren und werden über Google Fonts unter der SIL Open Font License 1.1 bereitgestellt.',
+        creditsDetails: 'Vollständige Danksagung und Symbolquellen',
+        upstreamSupportCredit: 'Dieser Aufruf wurde aus <a href="https://github.com/neomediavalist/neovalues">NeoValues von neomediavalist</a> übernommen. Aussagen in der Ich-Form beziehen sich auf diesen Autor.'
+    }
+};
+for (const lang of I18n.supportedLanguages) Object.assign(TRANSLATIONS[lang].ui, HV_CREDITS[lang]);
+
 // Common static controls on the retained HyperValuesForked pages.
 document.addEventListener('DOMContentLoaded', () => {
     const labels = {Start: 'start', Values: 'values', Ideologies: 'ideologies', Changelog: 'changelog',
