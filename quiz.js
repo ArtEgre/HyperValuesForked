@@ -1,22 +1,3 @@
-let questionsByCategory = {};
-const categoryOrder = [
-    "economics",
-    "resource_management",
-    "culture",
-    "authority",
-    "nation",
-    "foreign",
-    "technology",
-    "social_control",
-    "territorial_organization"
-];
-
-let currentCategoryIndex = 0;
-let currentQuestions = {};
-let results = {};
-let history = [];
-let currentNodeId = null;
-
 function getLocalizedQuestionText(node) {
     if (!node) return "";
     const lang = (typeof I18n !== 'undefined') ? I18n.currentLanguage : 'en';
@@ -45,132 +26,107 @@ function getLocalizedOptionText(opt) {
     return opt.text || "";
 }
 
-function initQuiz() {
-    if (typeof questionsData !== 'undefined') {
-        questionsByCategory = questionsData;
-        startQuizCategory(categoryOrder[currentCategoryIndex]);
-        return;
-    }
 
-    fetch('questions_tree.json')
-        .then(res => res.json())
-        .then(data => {
-            questionsByCategory = data;
-            startQuizCategory(categoryOrder[currentCategoryIndex]);
-        })
-        .catch(err => {
-            console.error("Failed to load questions_tree.json:", err);
-            const questionEl = document.getElementById('question');
-            if (questionEl) {
-                questionEl.innerText = "Error loading question tree. If testing locally, run a local web server (e.g. npx serve or python -m http.server).";
-            }
-        });
+// The questions of one category (quiz.html?cat=economics). Getting a value saves it and goes back to
+// the list of categories (results.html).
+const params = new URLSearchParams(window.location.search);
+const category = params.get('cat');
+const answers = HV.loadAnswers();
+let currentQuestions = {};
+let currentNodeId = null;
+let nodeStack = [];        // questions already answered, for the back button
+
+function backToList() {
+  window.location.href = `results.html#cat-${category}`;
 }
 
-function loadCategoryMap(category) {
-    currentQuestions = {};
-    if (questionsByCategory[category]) {
-        questionsByCategory[category].forEach(q => {
-            currentQuestions[q.id] = q;
-        });
-    }
+function showError(message) {
+  document.getElementById('question').innerText = message;
+  const buttonsDiv = document.getElementById('buttons');
+  buttonsDiv.innerHTML = '';
+  buttonsDiv.appendChild(makeButton(I18n.t('back'), backToList));
 }
 
-function startQuizCategory(category, targetId = null) {
-    loadCategoryMap(category);
-    const catList = questionsByCategory[category];
-    if (!catList || catList.length === 0) return;
-
-    const firstId = targetId || catList[0].id;
-    renderNode(currentQuestions[firstId]);
-}
-
-function selectOption(nextId) {
-    history.push({
-        categoryIndex: currentCategoryIndex,
-        nodeId: currentNodeId,
-        results: { ...results }
-    });
-
-    const category = categoryOrder[currentCategoryIndex];
-    const node = currentQuestions[nextId];
-
-    if (!node || !node.options) {
-        results[category] = nextId;
-        currentCategoryIndex++;
-
-        if (currentCategoryIndex < categoryOrder.length) {
-            startQuizCategory(categoryOrder[currentCategoryIndex]);
-        } else {
-            localStorage.setItem('quizResults', JSON.stringify(results));
-            window.location.href = 'results.html';
-        }
-    } else {
-        renderNode(node);
+fetch('questions_tree.json')
+  .then(res => {
+    if (!res.ok) throw new Error('HTTP ' + res.status);
+    return res.json();
+  })
+  .then(tree => {
+    // hasOwnProperty: keys such as "constructor" or "__proto__" must not count as categories
+    if (!category || !Object.prototype.hasOwnProperty.call(tree, category)) {
+      window.location.replace('results.html');
+      return;
     }
+    tree[category].forEach(q => currentQuestions[q.id] = q);
+    renderNode(currentQuestions[tree[category][0].id]);
+  })
+  .catch(() => {
+    showError(I18n.t('questionsError'));
+  });
+
+function makeButton(text, onClick) {
+  const btn = document.createElement('button');
+  btn.innerText = text;
+  btn.onclick = onClick;
+  return btn;
 }
 
 function renderNode(node) {
-    if (!node) return;
-    currentNodeId = node.id;
+  currentNodeId = node.id;
+  const buttonsDiv = document.getElementById('buttons');
+  buttonsDiv.innerHTML = '';
+  document.getElementById('question').innerText = getLocalizedQuestionText(node);
 
-    const questionEl = document.getElementById('question');
-    const buttonsDiv = document.getElementById('buttons');
-    if (!questionEl || !buttonsDiv) return;
+  if (node.options && node.options.length > 3) {
+    buttonsDiv.classList.add('multi-column');
+  } else {
+    buttonsDiv.classList.remove('multi-column');
+  }
 
-    buttonsDiv.innerHTML = '';
-    questionEl.innerText = getLocalizedQuestionText(node);
+  node.options.forEach(opt => {
+    const btn = makeButton(getLocalizedOptionText(opt), () => selectOption(opt.next));
+    if (opt.color) btn.style.backgroundColor = opt.color;
+    buttonsDiv.appendChild(btn);
+  });
 
-    if (node.options && node.options.length > 3) {
-        buttonsDiv.classList.add('multi-column');
-    } else {
-        buttonsDiv.classList.remove('multi-column');
-    }
+  buttonsDiv.appendChild(makeButton(I18n.t(nodeStack.length ? 'prevQuestion' : 'back'), previousQuestion));
+}
 
-    if (node.options) {
-        node.options.forEach(opt => {
-            const btn = document.createElement('button');
-            btn.innerText = getLocalizedOptionText(opt);
-            if (opt.color) btn.style.backgroundColor = opt.color;
-            btn.onclick = () => selectOption(opt.next);
-            buttonsDiv.appendChild(btn);
-        });
-    }
+function selectOption(nextId) {
+  nodeStack.push(currentNodeId);
+  const node = currentQuestions[nextId];
+  if (!node) {
+    nodeStack.pop();
+    showError(I18n.t('missingQuestion'));
+    return;
+  }
+  if (!node.options) {
+    addValue(node.id);
+  } else {
+    renderNode(node);
+  }
+}
 
-    updateBackButton();
+function addValue(valueId) {
+  const list = answers[category] || (answers[category] = []);
+  const existing = list.find(item => item.value === valueId);
+  if (!existing) {
+    list.push({ value: valueId, agree: 1 });
+  } else if (!(existing.agree > 0)) {
+    // picked again after being marked neutral or opposite: it now matches
+    existing.agree = 1;
+  }
+  HV.saveAnswers(answers);
+  backToList();
 }
 
 function previousQuestion() {
-    if (history.length === 0) {
-        window.location.href = 'Instruction.html';
-        return;
-    }
-
-    const prevState = history.pop();
-    currentCategoryIndex = prevState.categoryIndex;
-    results = prevState.results;
-    loadCategoryMap(categoryOrder[currentCategoryIndex]);
-    renderNode(currentQuestions[prevState.nodeId]);
+  if (nodeStack.length) {
+    renderNode(currentQuestions[nodeStack.pop()]);
+  } else {
+    backToList();
+  }
 }
 
-function updateBackButton() {
-    const backBtn = document.getElementById('back-button');
-    if (!backBtn) return;
-
-    if (typeof I18n !== 'undefined') {
-        backBtn.innerText = history.length === 0
-            ? I18n.t("backToInstructions")
-            : I18n.t("prevQuestion");
-    } else {
-        backBtn.innerText = history.length === 0 ? "Back to Instructions" : "Previous Question";
-    }
-}
-
-document.addEventListener('DOMContentLoaded', initQuiz);
-
-window.addEventListener('languageChanged', () => {
-    if (currentNodeId && currentQuestions[currentNodeId]) {
-        renderNode(currentQuestions[currentNodeId]);
-    }
-    updateBackButton();
-});
+window.addEventListener("languageChanged", () => { if (currentQuestions[currentNodeId]) renderNode(currentQuestions[currentNodeId]); });

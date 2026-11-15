@@ -3,194 +3,255 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NeoValues</title>
+    <title>HyperValuesForked</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/svg" href="icon.svg">
+    <link rel="icon" type="image/svg+xml" href="icon.svg">
     <script src="theme.js"></script>
     <script src="translations.js"></script>
     <script src="i18n.js"></script>
+    <script src="hyper-i18n.js"></script>
+    <script src="linebreak.js"></script>
 </head>
 <body>
     <div class="main-container">
-        <div class="main-results-wrapper">
-            <div class="top-section">
-                <div class="title-container">
-                    <h1>NeoValues</h1>
-                    <span class="version-text">v4.1</span>
-                </div>
-                <div id="results-container"></div>
+        <div class="title-container">
+            <h1 class="brand-title">HyperValuesForked</h1>
+            <span class="version-text">v4.1</span>
+        </div>
+
+        <div id="values-container" class="category-list"></div>
+
+        <div id="results-panel" class="results-panel" style="display: none;">
+            <div id="label"></div>
+            <div id="closest-section" style="display: none;">
+                <p class="closest-heading">Next closest matches</p>
+                <div id="closest-list"></div>
             </div>
-            
-            <div class="bottom-section">
-                <div id="label"></div>
-                <div id="secondary-label"></div>
-                <p class="intro-text results-instruction" data-i18n="resultsInstruction">
-                    Click on any icon or label to view its description and original source.
-                </p>
-                
-                <div id="buttons" style="margin-top: 30px;">
-                    <button onclick="location.href='index.html'" data-i18n="backToMenu">Back to menu</button>
-                </div>
+        </div>
+
+        <div class="button-container">
+            <button id="clear-button" style="display: none;">Clear all</button>
+            <div id="download-row" class="download-row" style="display: none;">
+                <button id="download-button">Download image</button>
+                <select id="image-scale" aria-label="Image size" title="Image size">
+                    <option value="1">1x</option>
+                    <option value="2">2x</option>
+                    <option value="3">3x</option>
+                </select>
             </div>
+            <p id="download-note" class="download-note" style="display: none;"></p>
+            <button onclick="location.href='index.html'">Back to menu</button>
         </div>
     </div>
 
     <script src="data.js"></script>
+    <script src="scoring.js"></script>
+    <script src="share_image.js"></script>
     <script>
-        function renderResults() {
-            const results = JSON.parse(localStorage.getItem('quizResults') || '{}');
-            const container = document.getElementById('results-container');
-            if (!container) return;
+        const CLOSEST_COUNT = 3;
+        let answers = HV.loadAnswers();
 
+        const byId = id => document.getElementById(id);
+        const nameOf = (category, value) => I18n.getValueName(category, value);
+
+        function makeTile(href, title) {
+            const tile = document.createElement('a');
+            tile.className = 'result-item';
+            tile.href = href;
+            tile.style.textDecoration = 'none';
+            tile.style.color = 'inherit';
+            if (title) tile.title = title;
+            return tile;
+        }
+
+        function renderLists() {
+            const container = byId('values-container');
             container.innerHTML = '';
 
             categories.forEach(category => {
-                const resultValue = results[category];
-                if (resultValue) {
-                    const wrapper = document.createElement('a');
-                    wrapper.className = 'result-item';
-                    wrapper.href = `description.html?id=${resultValue}&cat=${category}`;
-                    wrapper.style.textDecoration = 'none';
-                    wrapper.style.color = 'inherit';
+                const section = document.createElement('div');
+                section.className = 'category-section';
+                section.id = `cat-${category}`;
+
+                const title = document.createElement('h2');
+                title.className = 'category-title';
+                title.innerText = I18n.getCategoryTitle(category);
+                section.appendChild(title);
+
+                const flex = document.createElement('div');
+                flex.className = 'values-flex-container';
+                const list = answers[category];
+
+                (list || []).slice().sort((a, b) => b.agree - a.agree).forEach(item => {
+                    const tile = makeTile(`description.html?id=${item.value}&cat=${category}&edit=1`,
+                        `${nameOf(category, item.value)}: ${HV.signed(item.agree)}`);
 
                     const img = document.createElement('img');
-                    img.src = `icons/${category}/${resultValue}.svg`;
+                    img.src = `icons/${category}/${item.value}.svg`;
                     img.className = 'result-icon';
+                    img.alt = '';
+                    img.style.borderRadius = '50%';
+                    img.style.boxShadow = `0 0 0 3px var(--bg-color), 0 0 0 6px ${HV.ringColor(item.agree)}`;
                     img.onerror = () => { img.style.display = 'none'; };
 
                     const name = document.createElement('p');
-                    name.innerText = I18n.getValueName(category, resultValue);
                     name.className = 'result-text';
+                    setName(name, nameOf(category, item.value));
 
-                    wrapper.appendChild(img);
-                    wrapper.appendChild(name);
-                    container.appendChild(wrapper);
-                }
-            });
+                    const agree = document.createElement('p');
+                    agree.className = 'result-agree';
+                    agree.textContent = HV.signed(item.agree);
 
-            // --- 1. EXACT MATCHING ---
-            const exactMatches = [];
-            for (const [ideologyName, requirements] of Object.entries(ideologies)) {
-                const requiredCategories = Object.keys(requirements);
-                const isFullMatch = requiredCategories.every(category => {
-                    const allowed = Array.isArray(requirements[category])
-                        ? requirements[category]
-                        : [requirements[category]];
-                    return allowed.includes(results[category]);
+                    tile.appendChild(img);
+                    tile.appendChild(name);
+                    tile.appendChild(agree);
+                    flex.appendChild(tile);
                 });
 
-                if (isFullMatch) {
-                    exactMatches.push({
-                        name: ideologyName,
-                        totalRequired: requiredCategories.length
-                    });
-                }
-            }
+                const add = makeTile(`quiz.html?cat=${category}`);
+                const circle = document.createElement('div');
+                circle.className = 'result-icon result-none add-icon';
+                const label = document.createElement('p');
+                label.className = 'result-text';
+                label.textContent = I18n.t('addValue');
+                add.appendChild(circle);
+                add.appendChild(label);
+                flex.appendChild(add);
 
-            exactMatches.sort((a, b) => b.totalRequired - a.totalRequired);
-            const finalLabel = exactMatches.length > 0 ? exactMatches[0].name : "No exact match";
+                section.appendChild(flex);
+                container.appendChild(section);
+            });
+        }
 
-            const labelDiv = document.getElementById('label');
-            labelDiv.className = "label-bubble";
-            labelDiv.style.backgroundColor = labelColors[finalLabel] || "#7a7a7a";
-            if (finalLabel !== "No exact match") {
-                labelDiv.innerHTML = `<a href="description.html?id=${encodeURIComponent(finalLabel)}&type=ideology" style="color: inherit; text-decoration: none; display: block;">${I18n.getIdeologyName(finalLabel)}</a>`;
+        // Best match and the next closest matches (scoring lives in scoring.js)
+        function renderResults() {
+            const panel = byId('results-panel');
+            const labelDiv = byId('label');
+            const closestSection = byId('closest-section');
+            const closestList = byId('closest-list');
+            labelDiv.innerHTML = '';
+            closestList.innerHTML = '';
+            closestSection.style.display = 'none';
+
+            const touched = categories.some(category => answers[category]);
+            panel.style.display = touched ? '' : 'none';
+            byId('clear-button').style.display = touched ? '' : 'none';
+            byId('download-row').style.display = touched ? '' : 'none';
+            byId('download-note').style.display = touched ? '' : 'none';
+            if (!touched) return;
+
+            const ranked = HV.closestIdeologies(answers, null, 1 + CLOSEST_COUNT);
+            const best = ranked[0];
+            const closestMatches = ranked.slice(1);
+
+            labelDiv.className = 'label-bubble';
+            labelDiv.style.backgroundColor = best ? (labelColors[best.label] || '#7a7a7a') : '#7a7a7a';
+
+            if (best) {
+                const labelLink = document.createElement('a');
+                labelLink.href = `description.html?id=${encodeURIComponent(best.label)}&type=ideology&compare=1`;
+                labelLink.style.cssText = 'color: inherit; text-decoration: none; display: block;';
+                labelLink.title = `${I18n.t('probability')} ${HV.percent(best.probability)}`;
+                const labelName = document.createElement('span');
+                setName(labelName, I18n.getIdeologyName(best.label));
+                const labelScore = document.createElement('span');
+                labelScore.className = 'label-score';
+                labelScore.textContent = `(${HV.percent(best.probability)})`;
+                labelLink.append(labelName, ' ', labelScore);
+                labelDiv.appendChild(labelLink);
+
             } else {
-                labelDiv.innerText = I18n.t("noExactMatch");
+                setName(labelDiv, I18n.t('noExactMatch'));
             }
 
-            // --- 2. NEXT CLOSEST MATCH ---
-            const scoredLabels = Object.entries(ideologies).map(([name, requirements]) => {
-                const requiredCategories = Object.keys(requirements);
-                const totalRequired = requiredCategories.length;
-                let score = 0;
-                let penalty = 0;
-                let identicalCount = 0;
-                let broaderCount = 0;
+            if (closestMatches.length > 0) {
+                closestSection.style.display = 'flex';
+                closestMatches.forEach((match, index) => {
+                    const color = (labelColors[match.label] || '#7a7a7a').slice(0, 7);
 
-                requiredCategories.forEach(category => {
-                    const allowed = Array.isArray(requirements[category])
-                        ? requirements[category]
-                        : [requirements[category]];
-                    const userVal = results[category];
-                    if (!userVal) return;
+                    // Same look as the original "Next closest match": an outlined bubble in the ideology's color
+                    const pill = document.createElement('a');
+                    pill.className = 'closest-pill';
+                    pill.href = `description.html?id=${encodeURIComponent(match.label)}&type=ideology&compare=1`;
+                    pill.style.setProperty('--pill-color', color);
+                    pill.title = `${I18n.t('probability')} ${HV.percent(match.probability)}`;
 
-                    if (allowed.includes(userVal)) {
-                        score += 1.0;
-                        identicalCount++;
-                        return;
-                    }
+                    const rank = document.createElement('span');
+                    rank.className = 'cp-rank';
+                    rank.textContent = `${index + 1}.`;
+                    const name = document.createElement('span');
+                    name.className = 'cp-name';
+                    setName(name, I18n.getIdeologyName(match.label));
+                    const score = document.createElement('span');
+                    score.className = 'cp-score';
+                    score.textContent = `(${HV.percent(match.probability)})`;
 
-                    const userGroup = Object.keys(subCategories[category] || {}).find(group =>
-                        subCategories[category][group].includes(userVal)
-                    );
-                    if (!userGroup) return;
-
-                    const sharesSubCategory = allowed.some(val => {
-                        const valGroup = Object.keys(subCategories[category] || {}).find(group =>
-                            subCategories[category][group].includes(val)
-                        );
-                        return valGroup === userGroup;
-                    });
-
-                    if (sharesSubCategory) {
-                        score += 0.35;
-                        broaderCount++;
-                    }
-
-                    const allowedGroups = allowed.map(val =>
-                        Object.keys(subCategories[category] || {}).find(group =>
-                            subCategories[category][group].includes(val)
-                        )
-                    ).filter(Boolean);
-
-                    const isAllIncompatible = allowedGroups.length > 0 && allowedGroups.every(reqGroup => {
-                        const userIncompat = incompatibleSubCategories[userGroup] || [];
-                        const reqIncompat = incompatibleSubCategories[reqGroup] || [];
-                        return userIncompat.includes(reqGroup) || reqIncompat.includes(userGroup);
-                    });
-
-                    if (isAllIncompatible) {
-                        penalty = -100;
-                    }
+                    pill.append(rank, ' ', name, ' ', score);
+                    closestList.appendChild(pill);
                 });
-
-                const matchPercentage = totalRequired > 0 && penalty === 0
-                    ? (score / totalRequired) * 100
-                    : -100;
-
-                return {
-                    label: name,
-                    score: score + penalty,
-                    matchPercentage: Math.round(matchPercentage),
-                    identicalCount,
-                    broaderCount,
-                    totalRequired
-                };
-            })
-            .filter(item => item.label !== finalLabel && item.score > 0)
-            .sort((a, b) => {
-                if (b.matchPercentage !== a.matchPercentage) return b.matchPercentage - a.matchPercentage;
-                if (b.identicalCount !== a.identicalCount) return b.identicalCount - a.identicalCount;
-                return b.totalRequired - a.totalRequired;
-            });
-
-            const secondaryLabelDiv = document.getElementById('secondary-label');
-            secondaryLabelDiv.innerHTML = '';
-            secondaryLabelDiv.style.display = 'none';
-
-            if (scoredLabels.length > 0 && scoredLabels[0].matchPercentage > 0) {
-                const nextMatch = scoredLabels[0];
-                secondaryLabelDiv.className = "label-bubble";
-                secondaryLabelDiv.style.display = "inline-block";
-                secondaryLabelDiv.style.borderColor = labelColors[nextMatch.label] || "#7a7a7a";
-                secondaryLabelDiv.style.color = labelColors[nextMatch.label] || "#7a7a7a";
-                secondaryLabelDiv.innerHTML = `<a href="description.html?id=${encodeURIComponent(nextMatch.label)}&type=ideology" style="color: inherit; text-decoration: none; display: block;">${I18n.t("nextClosestMatch")}: ${I18n.getIdeologyName(nextMatch.label)} (${nextMatch.identicalCount}/${nextMatch.totalRequired})</a>`;
             }
         }
 
-        document.addEventListener('DOMContentLoaded', renderResults);
-        window.addEventListener('languageChanged', renderResults);
+        function render() {
+            renderLists();
+            renderResults();
+            fitNames();
+        }
+
+        // Two pictures with the whole result: 1080 x 1920 for phones and 1920 x 1080 for computers,
+        // or 2 or 3 times bigger with the same proportions
+        function showImageSizes() {
+            const k = Number(byId('image-scale').value) || 1;
+            byId('download-note').textContent =
+                `${I18n.t('phone')} ${1080 * k} \u00d7 ${1920 * k}, ${I18n.t('computer')} ${1920 * k} \u00d7 ${1080 * k}`;
+        }
+        byId('image-scale').onchange = showImageSizes;
+        showImageSizes();
+
+        byId('download-button').onclick = async () => {
+            const button = byId('download-button');
+            const label = button.textContent;
+            const wanted = Number(byId('image-scale').value) || 1;
+            button.disabled = true;
+            button.textContent = I18n.t('preparing');
+            try {
+                const used = await HVImage.download(answers, wanted);
+                if (Object.keys(used).some(kind => used[kind] < wanted)) {
+                    const saved = Object.keys(used)
+                        .map(kind => `${kind} ${HVImage.SIZES[kind].w * used[kind]} \u00d7 ${HVImage.SIZES[kind].h * used[kind]}`)
+                        .join(', ');
+                    alert(`${I18n.t('imageFallback')} ${saved}.`);
+                }
+            } catch (e) {
+                alert(I18n.t('imageError'));
+            }
+            button.textContent = label;
+            button.disabled = false;
+        };
+
+        byId('clear-button').onclick = () => {
+            if (!confirm(I18n.t('clearConfirm'))) return;
+            answers = {};
+            HV.saveAnswers(answers);
+            render();
+        };
+
+        window.addEventListener('languageChanged', () => { render(); showImageSizes(); });
+        render();
+
+        // after adding a value, the page opens at that category
+        if (location.hash.indexOf('#cat-') === 0) {
+            const target = document.getElementById(location.hash.slice(1));
+            if (target) target.scrollIntoView();
+        }
+
+        // coming back with the browser's back button can show an old copy of the page
+        window.addEventListener('pageshow', event => {
+            if (event.persisted) {
+                answers = HV.loadAnswers();
+                render();
+            }
+        });
     </script>
 </body>
 </html>

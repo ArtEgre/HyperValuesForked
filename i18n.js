@@ -16,7 +16,8 @@ const I18n = {
     },
 
     init() {
-        const saved = localStorage.getItem('nv_lang');
+        let saved;
+        try { saved = localStorage.getItem('hv_lang') || localStorage.getItem('nv_lang'); } catch (e) { /* Optional storage. */ }
         this.currentLanguage = (saved && this.supportedLanguages.includes(saved))
             ? saved
             : this.defaultLanguage;
@@ -57,7 +58,7 @@ const I18n = {
     setLanguage(lang) {
         if (!this.supportedLanguages.includes(lang)) return;
         this.currentLanguage = lang;
-        localStorage.setItem('nv_lang', lang);
+        try { localStorage.setItem('hv_lang', lang); } catch (e) { /* Optional storage. */ }
         document.documentElement.setAttribute('lang', lang);
 
         this.closeSwitcher();

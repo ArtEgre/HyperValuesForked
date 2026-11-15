@@ -1,0 +1,719 @@
+{
+    "National Syndicalism": {
+        "s": "syndicalism:1|corporatism:0.6|laissez_faire:-1|state_socialism:-0.8|communization:-1|representative_democracy:-1|ethical_statism:0.8|civil_liberalism:-1|reactionary_modernism:0.5|romantic_nationalism:0.8|Cosmopolitanism:-1|Internationalism:-1|regimentalism:0.5|hierarchical_communism:1|alternative_modernism:1|syndicracy:1|centralism:1"
+    },
+    "Clerical Fascism": {
+        "s": "corporatism:0.9|religious_traditionalism:1|religious_authoritarianism:0.9|religious_nationalism:0.9|laissez_faire:-0.7|civil_liberalism:-1|representative_democracy:-1|communization:-1|Imperialism:1|Realpolitik:1|legal_moralism:1|disciplinarianism:1|regimentalism:1|centralism:1"
+    },
+    "Brazilian Integralism": {
+        "s": "corporatism:1|religious_traditionalism:0.8|religious_authoritarianism:0.6|cultural_nationalism:0.8|centralism:0.5|civil_liberalism:-1|laissez_faire:-0.8|state_socialism:-1|communization:-1|representative_democracy:-0.7|racial_nationalism:-1|disciplinarianism:1"
+    },
+    "Italian Fascism": {
+        "s": "corporatism:1|totalism:1|ethical_statism:1|romantic_nationalism:0.8|Imperialism:0.9|centralism:0.8|partocracy:0.8|autocracy:0.8|representative_democracy:-1|referendum_democracy:-1|civil_libertarianism:-1|permissivism:-1|laissez_faire:-1|state_socialism:-0.8|communization:-1|Cosmopolitanism:-1|Internationalism:-1|Non_Interventionism:-0.8|reactionary_modernism:1|industrialism:1"
+    },
+    "Peronism": {
+        "s": "dirigisme:0.8|social_corporatism:0.7|Progressive_Taxation:0.6|civic_paternalism:0.6|Non_Interventionism:0.7|cultural_nationalism:0.6|laissez_faire:-1|communization:-0.8|progressive_conservatism:1|civic_nationalism:1"
+    },
+    "Ba'athism": {
+        "s": "pan_nationalism:1|state_socialism:0.6|partocracy:0.8|laissez_faire:-0.8|state_capitalism:1|Progressive_Taxation:1|alternative_modernism:1|autocracy:1|Imperialism:1"
+    },
+    "Sansepolcrismo": {
+        "s": "Progressive_Taxation:0.8|progressivism:0.6|civic_nationalism:0.5|Imperialism:0.5|corporatism:0.4|autocracy:1|industrialism:1"
+    },
+    "Evolianism": {
+        "s": "perennial_traditionalism:1|aristocracy:1|feudalism:0.5|reactionaryism:0.7|representative_democracy:-1|progressivism:-1|social_progressivism:-1|civil_liberalism:-1|laissez_faire:-1|state_socialism:-1|communization:-1|civilizationism:1|Imperialism:1|techno_fatalism:1|disciplinarianism:1"
+    },
+    "Futurism": {
+        "s": "industrialism:1|prometheanism:0.6|alternative_modernism:0.7|Imperialism:0.6|conservatism:-1|traditionalist_conservatism:-1|reactionaryism:-1|primitivism:-1|neoluddism:-1|corporatism:1|technocracy:1|romantic_nationalism:1"
+    },
+    "National-Socialism": {
+        "s": "totalism:1|hypercentralism:0.9|autocracy:1|racial_nationalism:1|pan_nationalism:0.7|Imperialism:0.9|dirigisme:0.6|ethical_statism:0.5|reactionary_modernism:0.5|civil_libertarianism:-1|permissivism:-1|laissez_faire:-0.8|civil_liberalism:-1|representative_democracy:-1|state_socialism:-0.8|communization:-1|Cosmopolitanism:-1|Internationalism:-1|state_capitalism:1|corporatism:1|industrialism:1|centralism:1"
+    },
+    "Strasserism": {
+        "s": "guild_socialism:0.8|social_corporatism:0.6|state_socialism:0.4|racial_nationalism:0.9|ethical_statism:0.6|laissez_faire:-1|communization:-1|civil_liberalism:-1|representative_democracy:-1|Cosmopolitanism:-1|Internationalism:-1|hierarchical_communism:1|reactionary_modernism:1|ethnic_nationalism:1|industrialism:1|regimentalism:1|centralism:1"
+    },
+    "Falangism": {
+        "s": "corporatism:0.9|traditionalist_conservatism:0.6|ethical_statism:0.7|romantic_nationalism:0.8|Imperialism:0.5|centralism:0.8|regimentalism:0.6|regionalism:-0.8|confederalism:-0.8|laissez_faire:-0.8|civil_liberalism:-1|representative_democracy:-1|state_socialism:-0.8|communization:-1|yellow_socialism:1"
+    },
+    "Agrarian Fascism": {
+        "s": "agrarianism:1|agrarian_socialism:0.6|autocracy:0.8|ethical_statism:0.6|romantic_nationalism:0.8|traditionalist_conservatism:0.7|disciplinarianism:0.6|industrialism:-0.6|civil_liberalism:-1|representative_democracy:-1|state_socialism:-0.8"
+    },
+    "Ecofascism": {
+        "s": "conservationism:0.8|environmentalism:0.8|ethnic_nationalism:0.8|ethical_statism:0.6|Isolationism:0.6|industrialism:-0.7|laissez_faire:-0.7|Cosmopolitanism:-1|Globalism:-1|civil_liberalism:-0.8|dirigisme:1|reactionaryism:1|primitivism:1|totalism:1"
+    },
+    "Sorelianism": {
+        "s": "syndicalism:1|representative_democracy:-1|laissez_faire:-1|civil_liberalism:-0.8|state_socialism:-0.7|hierarchical_communism:1|alternative_modernism:1|ethical_statism:1|cultural_nationalism:1|Realpolitik:1"
+    },
+    "Rexism": {
+        "s": "corporatism:1|religious_traditionalism:0.9|religious_authoritarianism:0.6|religious_nationalism:0.6|armed_neutrality:0.5|representative_democracy:-1|civil_liberalism:-0.9|communization:-1"
+    },
+    "Legionarism": {
+        "s": "religious_nationalism:1|alternative_modernism:0.9|ethical_statism:0.7|corporatism:0.7|regimentalism:0.6|centralism:0.5|laissez_faire:-0.7|civil_liberalism:-1|representative_democracy:-1|state_socialism:-0.8|communization:-1|social_corporatism:1|romantic_nationalism:1|constitutional:0.5"
+    },
+    "Techno-Fascism": {
+        "s": "transhumanism:0.8|reactionary_modernism:0.6|corporatism:0.5|ethical_statism:0.7|cultural_nationalism:0.6|Imperialism:0.5|civil_liberalism:-1|representative_democracy:-1"
+    },
+    "National Solidarity": {
+        "s": "yellow_socialism:0.7|autocracy:0.6|cultural_nationalism:0.7|laissez_faire:-0.9|communization:-0.9|civil_liberalism:-0.8|reactionary_modernism:1|Imperialism:1"
+    },
+    "Cosmist Vanguardism": {
+        "s": "extropianism:0.8|transhumanism:0.7|prometheanism:0.6|state_capitalism:1|alternative_modernism:1|ethical_statism:1|pan_nationalism:1"
+    },
+    "Duginism": {
+        "s": "civilizationism:1|perennial_traditionalism:0.8|Imperialism:0.7|Globalism:-1|Cosmopolitanism:-1|civil_liberalism:-1|laissez_faire:-0.9|Internationalism:-0.7|corporatism:1|autocracy:1|legal_moralism:1"
+    },
+    "Fiumanism": {
+        "s": "social_corporatism:0.8|romantic_nationalism:0.8|autocracy:0.4|alternative_modernism:1|reactionary_modernism:1|ethical_statism:1|Non_Interventionism:1|permissivism:1"
+    },
+    "Eneasism": {
+        "s": "cultural_nationalism:0.8|industrialism:0.7|dirigisme:0.6|armed_neutrality:0.5|disciplinarianism:0.4|Globalism:-1|laissez_faire:-0.7|state_capitalism:1|Progressive_Taxation:1|traditionalist_conservatism:1|conservatism:1|technocracy:1|Realpolitik:1|legal_moralism:1|centralism:1"
+    },
+    "Social Nationalism": {
+        "s": "cultural_nationalism:0.7|social_market:0.7|Progressive_Taxation:0.6|Cosmopolitanism:-0.8|laissez_faire:-0.7|rhine_capitalism:1|mixed_lvt:1|traditionalist_conservatism:1|religious_traditionalism:1|representative_democracy:1|partocracy:1|religious_nationalism:1|Realpolitik:1|industrialism:1|legal_moralism:1|centralism:1"
+    },
+    "Ethnocacerismo": {
+        "s": "ethnic_nationalism:1|stratocracy:0.8|collective_distribution:0.6|agrarian_socialism:0.5|regimentalism:0.5|racial_nationalism:0.6|laissez_faire:-0.9|Globalism:-0.8|state_socialism:1|reactionaryism:1|traditionalist_conservatism:1|Imperialism:1|Realpolitik:1|industrialism:1|instrumentalism:1|centralism:1"
+    },
+    "National Primitivism": {
+        "s": "primitivism:1|ethnic_nationalism:0.8|Tribalism:0.7|industrialism:-1|Globalism:-1|Cosmopolitanism:-1|corporatism:1|distributism:1|collective_distribution:1|reactionaryism:1|perennial_traditionalism:1|ethical_statism:1|autocracy:1|Isolationism:1|regimentalism:1|disciplinarianism:1|centralism:1|regionalism:1"
+    },
+    "Social-Bonapartism": {
+        "s": "autocracy:1|referendum_democracy:0.4|dirigisme:0.7|industrialism:0.7|civic_paternalism:0.6|centralism:0.8|Imperialism:0.5|Progressive_Taxation:1|alternative_modernism:1|reactionary_modernism:1|progressive_conservatism:1|civic_nationalism:1|cultural_nationalism:1"
+    },
+    "Tridemism": {
+        "s": "meritocracy:0.7|lvt:0.6|dirigisme:0.5|civic_paternalism:0.5|mixed_lvt:1|civic_nationalism:1|Realpolitik:1|centralism:1"
+    },
+    "Nationalist Kemalism": {
+        "s": "dirigisme:1|corporatism:1|state_capitalism:1|Progressive_Taxation:1|flat_taxation:1|conservatism:1|reactionary_modernism:1|progressive_conservatism:1|partocracy:1|ethical_statism:1|autocracy:1|ethnic_nationalism:1|cultural_nationalism:1|Realpolitik:1|Isolationism:1|industrialism:1|disciplinarianism:1|regimentalism:1|securitism:1|centralism:1"
+    },
+    "National Collectivism": {
+        "s": "state_socialism:1|collective_distribution:1|reactionary_modernism:1|ethical_statism:1|ethnic_nationalism:1|Isolationism:1|instrumentalism:1|industrialism:1|totalism:1|hypercentralism:1|centralism:1"
+    },
+    "Nazi-Maoism": {
+        "s": "agrarian_socialism:1|collective_distribution:1|reactionary_modernism:1|autocracy:1|ethical_statism:1|racial_nationalism:1|alter_globalism:1|instrumentalism:1|industrialism:1|totalism:1|regimentalism:1|centralism:1"
+    },
+    "Savinkovism": {
+        "s": "dirigisme:1|corporatism:1|Progressive_Taxation:1|reactionary_modernism:1|autocracy:1|romantic_nationalism:1|Imperialism:1|irredentism:1|industrialism:1|regimentalism:1|centralism:1"
+    },
+    "Mosleyism": {
+        "s": "corporatism:1|reactionary_modernism:1|ethical_statism:1|syndicracy:1|civilizationism:1|Imperialism:1|mercantilism:1|industrialism:1|regimentalism:1|centralism:1"
+    },
+    "Revolutionary Nationalism": {
+        "s": "guild_socialism:1|syndicalism:1|market_socialism:1|agrarian_socialism:1|collective_distribution:1|Progressive_Taxation:1|Confiscatory_Taxation:1|alternative_modernism:1|social_progressivism:1|progressivism:1|syndicracy:1|councilism:1|referendum_democracy:1|communalism:1|pan_nationalism:1|cultural_nationalism:1|ethnic_nationalism:1|romantic_nationalism:1|alter_globalism:1|Internationalism:1|irredentism:1|reputationalism:1|civic_paternalism:1|disciplinarianism:1|regimentalism:1|securitism:1|subsidiarity:1|municipalism:1|confederalism:1|federalism:1|regionalism:1"
+    },
+    "Volkism": {
+        "s": "romantic_nationalism:0.9|ethnic_nationalism:0.7|agrarianism:0.8|autocracy:0.5|reactionaryism:0.6|industrialism:-0.5|Cosmopolitanism:-1|civil_liberalism:-0.8|agrarian_socialism:1|feudalism:1|legal_moralism:1"
+    },
+    "Optimateism": {
+        "s": "aristocracy:1|traditionalist_conservatism:0.8|representative_democracy:-0.9|referendum_democracy:-1|feudalism:1|cameralism:1|Imperialism:1|legal_moralism:1"
+    },
+    "Integralism": {
+        "s": "religious_traditionalism:1|religious_authoritarianism:0.8|communitarianism:0.7|regionalism:0.5|distributism:0.5|corporatism:0.5|social_distributism:0.5|civil_liberalism:-1|laissez_faire:-0.8|communization:-1|state_socialism:-0.8|centralism:1|subsidiarity:1"
+    },
+    "National Capitalism": {
+        "s": "laissez_faire:0.7|tariff_funding:0.8|cultural_nationalism:0.8|Imperialism:0.5|Globalism:-1|Cosmopolitanism:-0.8|state_socialism:-1|reactionaryism:1|autocracy:1"
+    },
+    "Feudal Monarchism": {
+        "s": "feudalism:1|traditionalist_conservatism:0.6|aristocracy:0.7|representative_democracy:-0.9|progressivism:-0.9|religious_traditionalism:1|absolute:1|cultural_nationalism:1|Non_Interventionism:1|Isolationism:1|armed_neutrality:1|neoluddism:1|suzerainty:1"
+    },
+    "Carlism": {
+        "s": "religious_traditionalism:1|absolute:0.5|religious_nationalism:0.7|regionalism:0.8|confederalism:0.5|corporatism:0.5|distributism:0.4|legal_moralism:0.5|civil_liberalism:-1|representative_democracy:-0.9|centralism:-0.9|laissez_faire:-0.8|communization:-1|federalism:1"
+    },
+    "Autocratic Monarchism": {
+        "s": "absolute:1|autocracy:0.8|traditionalist_conservatism:0.4|representative_democracy:-1|constitutional:-1|cameralism:1|feudalism:1|dirigisme:1|state_capitalism:1|cultural_nationalism:1|Realpolitik:1|industrialism:1|instrumentalism:1"
+    },
+    "Theocratic Distributism": {
+        "s": "theocracy:1|distributism:1|religious_traditionalism:0.8|communitarianism:0.6|laissez_faire:-0.9|state_socialism:-0.9|Isolationism:1"
+    },
+    "Reactionary Feudalism": {
+        "s": "feudalism:1|reactionaryism:0.9|aristocracy:0.9|progressivism:-1|representative_democracy:-1|cultural_nationalism:1|Isolationism:1|legal_moralism:1"
+    },
+    "Clerical Monarchism": {
+        "s": "religious_authoritarianism:0.9|religious_traditionalism:0.9|religious_nationalism:0.6|absolute:0.5|civil_liberalism:-1|representative_democracy:-0.9|cameralism:1|Non_Interventionism:1"
+    },
+    "Neo-Absolutism": {
+        "s": "absolute:1|neoreactionaryism:0.8|representative_democracy:-1|referendum_democracy:-1|progressivism:-1|state_capitalism:1|cultural_nationalism:1|Realpolitik:1"
+    },
+    "Aristocratic Cameralism": {
+        "s": "cameralism:1|aristocracy:0.9|reactionaryism:0.6|representative_democracy:-0.9|cultural_nationalism:1|Isolationism:1"
+    },
+    "Developmental Theocracy": {
+        "s": "theocracy:1|religious_nationalism:0.8|industrialism:0.7|traditionalist_conservatism:0.6|third_way:1"
+    },
+    "Classical Eurasianism": {
+        "s": "civilizationism:1|traditionalist_conservatism:0.6|Realpolitik:0.6|dirigisme:0.5|Globalism:-0.9|civil_liberalism:-0.6|meritocracy:1|disciplinarianism:1|federalism:1|suzerainty:1"
+    },
+    "Mladorossism": {
+        "s": "absolute:0.7|state_socialism:0.5|religious_traditionalism:0.5|traditionalist_conservatism:0.4|civilizationism:0.4|regimentalism:0.5|laissez_faire:-0.8|representative_democracy:-0.9"
+    },
+    "National Social Capitalism": {
+        "s": "social_market:0.6|Progressive_Taxation:0.5|ethnic_nationalism:0.8|centralism:0.5|rhine_capitalism:1|mixed_lvt:1|reactionaryism:1|traditionalist_conservatism:1|autocracy:1|representative_democracy:1|Isolationism:1|Realpolitik:1|industrialism:1|legal_moralism:1|disciplinarianism:1"
+    },
+    "Right-State Liberalism": {
+        "s": "laissez_faire:0.8|flat_taxation:0.6|autocracy:0.4|civil_liberalism:0.5|progressivism:1|racial_nationalism:1|civilizationism:1|Imperialism:1|transhumanism:1|industrialism:1|disciplinarianism:1|regimentalism:1|hypercentralism:1|centralism:1"
+    },
+    "Monarquia Syndicalista": {
+        "s": "syndicalism:1|Progressive_Taxation:1|religious_traditionalism:1|constitutional:1|syndicracy:1|cultural_nationalism:1|Non_Interventionism:1|disciplinarianism:1|regionalism:1|subsidiarity:1"
+    },
+    "Serenissimism": {
+        "s": "cameralism:1|corporatism:1|tariff_funding:1|traditionalist_conservatism:1|aristocracy:1|communitarianism:1|mercantilism:1|legal_moralism:1|suzerainty:1"
+    },
+    "National Conservatism": {
+        "s": "cultural_nationalism:1|conservatism:0.8|representative_democracy:0.5|legal_moralism:0.5|residualism:0.4|Globalism:-1|Cosmopolitanism:-0.8|Internationalism:-0.7|Progressive_Taxation:1|traditionalist_conservatism:1|Realpolitik:1|centralism:1|federalism:1|regionalism:1"
+    },
+    "Paleoconservatism": {
+        "s": "distributism:1|free_market_distributism:1|dirigisme:1|cameralism:1|paternalistic_capitalism:1|residualism:1|tariff_funding:1|flat_taxation:1|paleoconservatism:1|representative_democracy:1|cultural_nationalism:1|Isolationism:1|legal_moralism:1"
+    },
+    "Neoconservatism": {
+        "s": "Interventionism:1|civic_nationalism:0.6|representative_democracy:0.7|residualism:0.5|liberal_conservatism:0.5|Isolationism:-1|Non_Interventionism:-1|progressive_conservatism:1|conservative_liberalism:1|civilizationism:1"
+    },
+    "Mesoconservatism": {
+        "s": "conservatism:0.6|representative_democracy:0.5|Interventionism:0.5|civic_nationalism:0.5|residualism:1|traditionalist_conservatism:1|legal_moralism:1"
+    },
+    "Red Toryism": {
+        "s": "traditionalist_conservatism:0.9|communitarianism:0.8|constitutional:0.6|cultural_nationalism:0.5|social_distributism:0.5|paternalistic_capitalism:0.5|laissez_faire:-0.8|Progressive_Taxation:1|Non_Interventionism:1"
+    },
+    "Green Conservatism": {
+        "s": "conservationism:1|environmentalism:0.8|conservatism:0.7|social_market:0.5|traditionalist_conservatism:1|representative_democracy:1|cultural_nationalism:1|communitarianism:1"
+    },
+    "Clerical Conservatism": {
+        "s": "religious_traditionalism:1|religious_nationalism:0.6|legal_moralism:0.7|representative_democracy:0.4|paternalistic_capitalism:0.4|permissivism:-0.8|progressivism:-0.8|Non_Interventionism:1"
+    },
+    "Gaullism": {
+        "s": "dirigisme:0.7|centralism:0.6|cultural_nationalism:0.6|armed_neutrality:0.5|civic_paternalism:0.5|conservatism:1|alternative_modernism:1|representative_democracy:1"
+    },
+    "Free-Market Conservatism": {
+        "s": "laissez_faire:0.9|conservatism:0.6|civic_nationalism:0.5|representative_democracy:0.5|state_socialism:-1|Progressive_Taxation:-0.7|flat_taxation:1|tariff_funding:1|Realpolitik:1|legal_moralism:1|civil_libertarianism:1|federalism:1|centralism:1|regionalism:1"
+    },
+    "Agrarian Conservatism": {
+        "s": "agrarianism:1|distributism:0.6|conservatism:0.7|communitarianism:0.7|industrialism:-0.5|traditionalist_conservatism:1|representative_democracy:1"
+    },
+    "Liberal Toryism": {
+        "s": "progressive_conservatism:0.6|Globalism:0.5|keynesianism:0.4|representative_democracy:1|constitutional:1|cultural_nationalism:1|civic_paternalism:1|centralism:1|regionalism:1"
+    },
+    "Social Gaullism": {
+        "s": "yellow_socialism:0.7|civic_paternalism:0.5|armed_neutrality:0.5|progressive_conservatism:0.5|rhine_capitalism:0.5|Progressive_Taxation:0.4|neo_corporatism:1|representative_democracy:1|civic_nationalism:1|industrialism:1|regionalism:1|centralism:1"
+    },
+    "Neo-Gaullism": {
+        "s": "civic_nationalism:0.5|centralism:0.5|Realpolitik:0.4|liberal_conservatism:0.5|rhine_capitalism:1|representative_democracy:1|instrumentalism:1|civic_paternalism:1"
+    },
+    "Bonapartist Gaullism": {
+        "s": "autocracy:0.6|hypercentralism:0.5|dirigisme:0.6|industrialism:0.6|armed_neutrality:0.5|cultural_nationalism:0.5|Progressive_Taxation:1|conservatism:1|disciplinarianism:1"
+    },
+    "One-Nation Conservatism": {
+        "s": "civic_paternalism:0.8|progressive_conservatism:0.7|cultural_nationalism:0.4|Progressive_Taxation:0.5|keynesianism:0.4|laissez_faire:-0.6|communization:-1|paternalistic_capitalism:1|social_market:1|liberal_conservatism:1|constitutional:1|civic_nationalism:1|Realpolitik:1|instrumentalism:1|industrialism:1|regionalism:1|centralism:1"
+    },
+    "Conservative Technoliberalism": {
+        "s": "post_industrialism:0.8|Globalism:0.6|civil_libertarianism:0.5|liberal_conservatism:0.5|federalism:0.4|social_market:1|basic_income_capitalism:1|flat_taxation:1|conservatism:1|representative_democracy:1|civic_nationalism:1|civilizationism:1|regionalism:1"
+    },
+    "Right-Social Authoritarianism": {
+        "s": "securitism:0.6|centralism:0.5|autocracy:0.5|third_way:1|residualism:1|flat_taxation:1|Progressive_Taxation:1|mixed_lvt:1|liberal_conservatism:1|conservatism:1|stratocracy:1|civic_nationalism:1|Realpolitik:1|industrialism:1|instrumentalism:1"
+    },
+    "Kjærsgaardism": {
+        "s": "cultural_nationalism:0.9|Isolationism:0.4|Progressive_Taxation:0.4|legal_moralism:0.4|Cosmopolitanism:-1|Globalism:-0.8|rhine_capitalism:1|traditionalist_conservatism:1|representative_democracy:1|disciplinarianism:1|centralism:1"
+    },
+    "Kekkonism": {
+        "s": "armed_neutrality:0.8|neo_corporatism:0.6|industrialism:0.5|centralism:0.5|progressive_conservatism:1|representative_democracy:1|cultural_nationalism:1|Realpolitik:1|regionalism:1"
+    },
+    "Putinism": {
+        "s": "state_capitalism:1|dirigisme:1|corporatocracy:1|flat_taxation:1|conservatism:1|traditionalist_conservatism:1|autocracy:1|civilizationism:1|Imperialism:1|Realpolitik:1|irredentism:1|industrialism:1|instrumentalism:1|securitism:1|centralism:1|regionalism:1"
+    },
+    "Post-Soviet Autocracy": {
+        "s": "state_capitalism:1|corporatocracy:1|flat_taxation:1|Progressive_Taxation:1|conservatism:1|autocracy:1|civic_nationalism:1|Realpolitik:1|industrialism:1|securitism:1|centralism:1"
+    },
+    "Radicalism": {
+        "s": "civil_liberalism:0.8|representative_democracy:0.7|civic_nationalism:0.6|Internationalism:0.5|social_solidarity_economy:0.4|theocracy:-1|religious_authoritarianism:-0.9|absolute:-1|social_market:1|secular_humanism:1|referendum_democracy:1|demarchy:1"
+    },
+    "Third Way": {
+        "s": "third_way:1|post_industrialism:0.6|civil_liberalism:0.6|representative_democracy:0.6|Globalism:0.5|Progressive_Taxation:0.4|mixed_lvt:1|civic_nationalism:1|Interventionism:1"
+    },
+    "Christian Democracy": {
+        "s": "social_market:0.8|representative_democracy:0.8|religious_traditionalism:0.5|Internationalism:0.5|Progressive_Taxation:0.4|paternalistic_capitalism:1|mixed_lvt:1|liberal_conservatism:1|conservative_liberalism:1|progressive_conservatism:1|civic_nationalism:1"
+    },
+    "Compassionate Conservatism": {
+        "s": "civic_paternalism:0.7|conservatism:0.5|residualism:0.4|religious_traditionalism:0.4|progressive_conservatism:1|conservative_liberalism:1|representative_democracy:1|civic_nationalism:1|Globalism:1|Interventionism:1"
+    },
+    "Rockefeller Republicanism": {
+        "s": "liberal_conservatism:0.8|keynesianism:0.4|Internationalism:0.5|representative_democracy:0.6|social_market:0.4|civic_nationalism:1|Realpolitik:1"
+    },
+    "Democratic Transhumanism": {
+        "s": "transhumanism:1|basic_income_capitalism:0.5|representative_democracy:0.6|progressivism:0.6|Globalism:0.6|Cosmopolitanism:0.7|social_progressivism:1|technogaianism:1"
+    },
+    "Neo-Solidarism": {
+        "s": "social_solidarity_economy:1|social_progressivism:0.6|ecomodernism:0.5|environmentalism:0.5|Internationalism:0.6|representative_democracy:0.5|civic_nationalism:1"
+    },
+    "Steppe Eurasianism": {
+        "s": "civilizationism:0.8|dirigisme:1|state_capitalism:1|progressive_conservatism:1|technocracy:1|Realpolitik:1|civic_paternalism:1"
+    },
+    "Classical Kemalism": {
+        "s": "dirigisme:0.8|civic_nationalism:0.8|progressivism:0.6|industrialism:0.6|theocracy:-1|religious_authoritarianism:-0.9|absolute:-1|Progressive_Taxation:1|secular_humanism:1|representative_democracy:1|Non_Interventionism:1|civic_paternalism:1|centralism:1"
+    },
+    "Catholic Social Teaching": {
+        "s": "communitarianism:0.8|civic_paternalism:0.5|Internationalism:0.5|conservationism:0.5|environmentalism:0.6|laissez_faire:-0.9|communization:-1|state_socialism:-0.8|paternalistic_capitalism:1|social_corporatism:1|Progressive_Taxation:1|progressive_conservatism:1|conservatism:1|representative_democracy:1|regionalism:1|confederalism:1|federalism:1|subsidiarity:1"
+    },
+    "Bleeding-Heart Authoritarianism": {
+        "s": "autocracy:0.6|centralism:0.5|permissivism:0.5|progressivism:0.5|Globalism:0.4|ordnungspolitik:1|laissez_faire:1|flat_taxation:1|social_progressivism:1|Cosmopolitanism:1|civic_nationalism:1|instrumentalism:1"
+    },
+    "Austro-Corporatism": {
+        "s": "neo_corporatism:0.9|rhine_capitalism:0.8|corporatism:0.4|armed_neutrality:0.5|federalism:0.4|cultural_nationalism:0.4|liberal_conservatism:1|progressive_conservatism:1|representative_democracy:1"
+    },
+    "Davos System": {
+        "s": "rhine_capitalism:1|third_way:1|mixed_lvt:1|Progressive_Taxation:1|progressivism:1|civil_liberalism:1|technocracy:1|Cosmopolitanism:1|Globalism:1|post_industrialism:1|ecomodernism:1|civic_paternalism:1|federalism:1"
+    },
+    "Nordic Model": {
+        "s": "neo_corporatism:0.8|Progressive_Taxation:0.8|civic_paternalism:0.6|social_progressivism:0.6|rhine_capitalism:0.6|Internationalism:0.5|representative_democracy:0.6|mixed_lvt:1|civil_liberalism:1|civic_nationalism:1|Globalism:1|centralism:1|federalism:1|regionalism:1"
+    },
+    "Social Democracy": {
+        "s": "social_market:0.7|Progressive_Taxation:0.8|representative_democracy:0.8|social_progressivism:0.6|civic_paternalism:0.6|Internationalism:0.5|keynesianism:0.5|laissez_faire:-0.8|communization:-0.7|rhine_capitalism:1|mixed_lvt:1|civic_nationalism:1|Globalism:1|alter_globalism:1|armed_neutrality:1|industrialism:1|instrumentalism:1|federalism:1|centralism:1|regionalism:1"
+    },
+    "Conservative Social Democracy": {
+        "s": "conservatism:0.6|communitarianism:0.6|social_market:0.5|Progressive_Taxation:0.6|representative_democracy:0.5|social_solidarity_economy:1|mixed_lvt:1|cultural_nationalism:1|Internationalism:1|Realpolitik:1|armed_neutrality:1"
+    },
+    "Social Distributism": {
+        "s": "social_distributism:1|communitarianism:0.7|Progressive_Taxation:0.5|alter_globalism:0.5|laissez_faire:-0.8|state_socialism:-0.6|mixed_lvt:1|lvt:1|social_progressivism:1|civil_liberalism:1|representative_democracy:1"
+    },
+    "Liberal Socialism": {
+        "s": "market_socialism:0.8|civil_liberalism:0.8|representative_democracy:0.7|Progressive_Taxation:0.5|partocracy:-0.8|totalism:-1|mixed_lvt:1|civic_nationalism:1|Internationalism:1|Globalism:1"
+    },
+    "Social Georgism": {
+        "s": "lvt:1|mixed_lvt:0.6|social_market:0.5|social_progressivism:0.5|representative_democracy:0.5|civic_nationalism:1|Globalism:1|Internationalism:1"
+    },
+    "Agrarian Social Democracy": {
+        "s": "agrarianism:0.9|communitarianism:0.7|social_distributism:0.5|Progressive_Taxation:0.5|representative_democracy:0.5|social_market:1|mixed_lvt:1|progressive_conservatism:1|Internationalism:1|alter_globalism:1|armed_neutrality:1"
+    },
+    "Progressive Corporatism": {
+        "s": "neo_corporatism:0.9|rhine_capitalism:0.8|social_progressivism:0.6|Progressive_Taxation:0.5|Internationalism:0.4|representative_democracy:0.6|mixed_lvt:1"
+    },
+    "Left-Gaullism": {
+        "s": "dirigisme:0.6|armed_neutrality:0.5|civic_nationalism:0.5|Progressive_Taxation:0.5|social_progressivism:0.5|social_solidarity_economy:0.4|representative_democracy:1"
+    },
+    "Green Social Democracy": {
+        "s": "environmentalism:1|social_market:0.6|Progressive_Taxation:0.7|civic_paternalism:0.5|social_progressivism:0.5|representative_democracy:0.6|Internationalism:0.5|keynesianism:1|mixed_lvt:1|progressivism:1|civic_nationalism:1|Cosmopolitanism:1|alter_globalism:1|armed_neutrality:1|Globalism:1|federalism:1|regionalism:1|centralism:1"
+    },
+    "Geo-Social Democracy": {
+        "s": "lvt:0.8|mixed_lvt:0.6|civic_paternalism:0.5|social_progressivism:0.5|representative_democracy:0.5|social_corporatism:1|keynesianism:1|progressivism:1|civic_nationalism:1|Internationalism:1|alter_globalism:1|armed_neutrality:1|Globalism:1|environmentalism:1|instrumentalism:1|federalism:1|centralism:1|regionalism:1"
+    },
+    "Christian Social Democracy": {
+        "s": "communitarianism:0.6|civic_paternalism:0.6|Progressive_Taxation:0.6|social_solidarity_economy:0.5|environmentalism:0.4|representative_democracy:0.6|Internationalism:0.4|religious_traditionalism:0.4|social_market:1|mixed_lvt:1|progressive_conservatism:1|civic_nationalism:1|alter_globalism:1|armed_neutrality:1|Globalism:1|instrumentalism:1|federalism:1|regionalism:1"
+    },
+    "Police Labourism": {
+        "s": "securitism:0.7|Progressive_Taxation:0.4|social_corporatism:0.4|keynesianism:1|mixed_lvt:1|social_progressivism:1|progressive_conservatism:1|representative_democracy:1|civic_nationalism:1|Realpolitik:1|Interventionism:1|industrialism:1|instrumentalism:1|retributivism:1|centralism:1"
+    },
+    "Left-Social Authoritarianism": {
+        "s": "autocracy:0.6|Progressive_Taxation:0.6|centralism:0.5|civic_paternalism:0.5|social_corporatism:1|guild_socialism:1|dirigisme:1|mixed_lvt:1|progressive_conservatism:1|alternative_modernism:1|social_progressivism:1|pan_nationalism:1|civic_nationalism:1|Realpolitik:1|Non_Interventionism:1|industrialism:1|disciplinarianism:1"
+    },
+    "Progressive Social Authoritarianism": {
+        "s": "autocracy:0.6|progressivism:0.6|centralism:0.5|Progressive_Taxation:0.5|industrialism:0.4|state_capitalism:1|social_corporatism:1|mixed_lvt:1|social_progressivism:1|partocracy:1|civic_nationalism:1|Realpolitik:1|disciplinarianism:1|regimentalism:1"
+    },
+    "Left-Wing Populism": {
+        "s": "referendum_democracy:0.5|Confiscatory_Taxation:0.5|alter_globalism:0.7|social_progressivism:0.5|civil_libertarianism:0.4|laissez_faire:-0.9|Globalism:-0.7|keynesianism:1|market_socialism:1|representative_democracy:1|civic_nationalism:1|environmentalism:1|instrumentalism:1|federalism:1|regionalism:1"
+    },
+    "Left-Social Democracy": {
+        "s": "market_socialism:0.6|Confiscatory_Taxation:0.5|social_progressivism:0.6|representative_democracy:0.7|communitarianism:0.5|alter_globalism:0.5|civic_paternalism:0.5|Internationalism:1|industrialism:1|centralism:1"
+    },
+    "Social-Helveticism": {
+        "s": "referendum_democracy:0.8|federalism:0.8|armed_neutrality:0.8|civic_paternalism:0.5|Progressive_Taxation:0.4|social_progressivism:0.4|civic_nationalism:0.5|social_market:1|rhine_capitalism:1|keynesianism:1|mixed_lvt:1"
+    },
+    "Left Kemalism": {
+        "s": "state_socialism:1|market_socialism:1|Confiscatory_Taxation:1|social_progressivism:1|representative_democracy:1|civic_nationalism:1|armed_neutrality:1|industrialism:1|civic_paternalism:1|centralism:1"
+    },
+    "Longism": {
+        "s": "keynesianism:1|paternalistic_capitalism:1|Confiscatory_Taxation:1|progressive_conservatism:1|representative_democracy:1|civic_nationalism:1|Isolationism:1|industrialism:1|instrumentalism:1|civic_paternalism:1|federalism:1"
+    },
+    "Classical Liberalism": {
+        "s": "laissez_faire:0.9|civil_liberalism:1|minarchism:0.6|representative_democracy:0.5|Non_Interventionism:0.7|civil_libertarianism:0.8|flat_taxation:0.4|absolute:-1|state_socialism:-0.9|theocracy:-0.8|tariff_funding:1|lvt:1|Voluntaryism:1|civic_nationalism:1|federalism:1|centralism:1|regionalism:1"
+    },
+    "Neoliberalism": {
+        "s": "laissez_faire:0.7|residualism:0.6|flat_taxation:0.4|Globalism:0.8|post_industrialism:0.4|civil_liberalism:0.5|representative_democracy:0.5|state_socialism:-1|dirigisme:-0.8|progressivism:1|civic_nationalism:1|extropianism:1"
+    },
+    "National Liberalism": {
+        "s": "laissez_faire:0.7|flat_taxation:0.4|conservative_liberalism:0.7|representative_democracy:0.6|cultural_nationalism:0.7|Realpolitik:0.4"
+    },
+    "Social Liberalism": {
+        "s": "social_market:0.6|Progressive_Taxation:0.6|civil_liberalism:1|civil_libertarianism:0.7|representative_democracy:0.7|laissez_faire:-0.5|mixed_lvt:1|social_progressivism:1|progressivism:1|civic_nationalism:1|Globalism:1|Internationalism:1|post_industrialism:1|federalism:1|centralism:1|regionalism:1"
+    },
+    "Ordoliberalism": {
+        "s": "ordnungspolitik:1|conservative_liberalism:0.5|representative_democracy:0.5|laissez_faire:-0.5|state_socialism:-0.8|liberal_conservatism:1|civic_nationalism:1|Globalism:1|Internationalism:1"
+    },
+    "Bleeding-Heart Liberalism": {
+        "s": "basic_income_capitalism:0.7|social_progressivism:0.6|civil_libertarianism:0.7|Cosmopolitanism:0.6|Globalism:0.5|representative_democracy:0.6|Progressive_Taxation:1"
+    },
+    "Geo-Liberalism": {
+        "s": "lvt:0.9|mixed_lvt:0.6|basic_income_capitalism:0.5|civil_liberalism:0.7|representative_democracy:0.5|laissez_faire:0.4|civic_nationalism:1|Cosmopolitanism:1|Globalism:1"
+    },
+    "Green Liberalism": {
+        "s": "environmentalism:1|civil_liberalism:0.7|representative_democracy:0.6|social_market:0.5|Progressive_Taxation:0.4|Globalism:0.5|civic_nationalism:1|Cosmopolitanism:1"
+    },
+    "Whiggism": {
+        "s": "constitutional:1|conservative_liberalism:0.6|laissez_faire:0.4|representative_democracy:0.5|absolute:-1|civic_nationalism:1|Realpolitik:1"
+    },
+    "Muscular Liberalism": {
+        "s": "civil_liberalism:0.8|Interventionism:0.7|cultural_nationalism:0.5|representative_democracy:0.6|civic_paternalism:0.4|third_way:1|residualism:1|civilizationism:1"
+    },
+    "Transatlantic Federalism": {
+        "s": "federalism:0.8|civilizationism:0.6|Globalism:0.6|civil_liberalism:0.6|representative_democracy:0.6|ordnungspolitik:1|social_market:1|third_way:1|Progressive_Taxation:1|mixed_lvt:1|Interventionism:1|Internationalism:1|post_industrialism:1|industrialism:1|civil_libertarianism:1"
+    },
+    "New Deal Liberalism": {
+        "s": "keynesianism:0.9|Progressive_Taxation:0.6|civil_liberalism:0.5|industrialism:0.4|civic_paternalism:0.7|representative_democracy:0.5|laissez_faire:-0.9|progressive_conservatism:1|civic_nationalism:1|Internationalism:1|Interventionism:1|federalism:1"
+    },
+    "Venizelism": {
+        "s": "conservative_liberalism:0.5|representative_democracy:0.6|pan_nationalism:0.5|Imperialism:0.6|industrialism:0.4|civic_paternalism:0.4|centralism:0.4|social_solidarity_economy:1|social_market:1|Progressive_Taxation:1|liberal_conservatism:1|cultural_nationalism:1|irredentism:1|instrumentalism:1"
+    },
+    "Liberal Social Authoritarianism": {
+        "s": "autocracy:0.5|securitism:0.4|centralism:0.4|third_way:1|keynesianism:1|Progressive_Taxation:1|social_progressivism:1|civil_liberalism:1|partocracy:1|civic_nationalism:1|Globalism:1|Interventionism:1|instrumentalism:1|industrialism:1|disciplinarianism:1"
+    },
+    "Technoliberalism": {
+        "s": "post_industrialism:0.8|civil_libertarianism:0.7|civil_liberalism:0.7|Globalism:0.6|Cosmopolitanism:0.5|representative_democracy:0.5|ordnungspolitik:1|Progressive_Taxation:1|federalism:1"
+    },
+    "American Model": {
+        "s": "federalism:0.8|civil_libertarianism:0.7|civil_liberalism:0.6|representative_democracy:0.6|civic_nationalism:0.5|Interventionism:0.5|residualism:0.5|laissez_faire:1|Progressive_Taxation:1|conservative_liberalism:1|industrialism:1|instrumentalism:1"
+    },
+    "Techno-Neoliberalism": {
+        "s": "technocracy:0.8|Globalism:0.6|post_industrialism:0.7|flat_taxation:0.4|laissez_faire:0.5|Cosmopolitanism:0.5|residualism:1|civil_liberalism:1|progressivism:1|Interventionism:1|securitism:1|civic_paternalism:1|centralism:1|federalism:1|regionalism:1"
+    },
+    "Tsaingwenism": {
+        "s": "third_way:0.5|progressivism:0.6|representative_democracy:0.7|civic_nationalism:0.7|environmentalism:0.6|civil_libertarianism:0.6|Globalism:0.5|Progressive_Taxation:1|mixed_lvt:1|centralism:1"
+    },
+    "Liberal Imperialism": {
+        "s": "laissez_faire:1|ordnungspolitik:1|flat_taxation:1|Progressive_Taxation:1|conservative_liberalism:1|civil_liberalism:1|liberal_conservatism:1|representative_democracy:1|meritocracy:1|cultural_nationalism:1|romantic_nationalism:1|civic_nationalism:1|Imperialism:1|civil_libertarianism:1|federalism:1|centralism:1|regionalism:1"
+    },
+    "Liberal Meritocracy": {
+        "s": "social_market:1|third_way:1|Progressive_Taxation:1|civil_liberalism:1|meritocracy:1|civic_nationalism:1|Interventionism:1|Globalism:1|ecomodernism:1|post_industrialism:1|civil_libertarianism:1|federalism:1|centralism:1"
+    },
+    "Christian Socialism": {
+        "s": "communitarianism:0.8|utopian_socialism:0.5|representative_democracy:0.5|Non_Interventionism:0.5|laissez_faire:-0.9|guild_socialism:1|social_progressivism:1|progressive_conservatism:1"
+    },
+    "National Bolshevism": {
+        "s": "state_socialism:0.9|collective_distribution:0.7|partocracy:0.8|cultural_nationalism:0.6|romantic_nationalism:0.5|Imperialism:0.5|laissez_faire:-1|representative_democracy:-0.7|Cosmopolitanism:-0.8|perennial_traditionalism:1|reactionary_modernism:1|civilizationism:1"
+    },
+    "Democratic Socialism": {
+        "s": "market_socialism:0.5|free_socialism:0.4|representative_democracy:0.8|social_progressivism:0.6|alter_globalism:0.4|Internationalism:0.5|laissez_faire:-0.9|partocracy:-0.8|totalism:-1|state_socialism:1|civic_nationalism:1"
+    },
+    "Conservative Socialism": {
+        "s": "state_socialism:0.8|Confiscatory_Taxation:0.6|conservatism:0.7|traditionalist_conservatism:0.5|cultural_nationalism:0.5|laissez_faire:-1|progressivism:-0.7|partocracy:1|communitarianism:1|Realpolitik:1"
+    },
+    "Paleosocialism": {
+        "s": "state_socialism:0.7|paleoconservatism:0.6|communitarianism:0.6|Isolationism:0.6|Confiscatory_Taxation:0.5|cultural_nationalism:0.5"
+    },
+    "Cybernetic Socialism": {
+        "s": "state_socialism:0.6|technocracy:0.6|digital_democracy:0.5|prometheanism:0.6|progressivism:0.6|Internationalism:0.5|guild_socialism:1|social_progressivism:1"
+    },
+    "Utopian Communitarianism": {
+        "s": "utopian_socialism:1|communalism:0.8|communitarianism:0.9|progressivism:0.5|collective_distribution:1|Voluntaryism:1|social_progressivism:1|Non_Interventionism:1|alter_globalism:1|permissivism:1|civil_libertarianism:1|municipalism:1"
+    },
+    "Syndicalist Republicanism": {
+        "s": "syndicalism:1|representative_democracy:0.6|social_progressivism:0.5|Internationalism:0.5|absolute:-1|collective_distribution:1|Progressive_Taxation:1|syndicracy:1|civic_nationalism:1|armed_neutrality:1|civil_libertarianism:1|federalism:1|centralism:1|regionalism:1|subsidiarity:1"
+    },
+    "Left-Eurasianism": {
+        "s": "civilizationism:0.8|state_socialism:0.6|collective_distribution:0.5|alter_globalism:0.5|partocracy:0.5|alternative_modernism:1|regimentalism:1"
+    },
+    "Socialist Technoliberalism": {
+        "s": "market_socialism:0.6|ecomodernism:0.4|civil_libertarianism:0.6|civil_liberalism:0.5|digital_democracy:0.4|alter_globalism:0.5|Progressive_Taxation:0.5|Confiscatory_Taxation:1|progressivism:1|representative_democracy:1|Cosmopolitanism:1|civic_nationalism:1|prometheanism:1|federalism:1|regionalism:1"
+    },
+    "Mugabeism": {
+        "s": "agrarian_socialism:0.6|pan_nationalism:0.8|partocracy:0.6|autocracy:0.5|conservatism:0.4|alter_globalism:0.4|state_socialism:1|Confiscatory_Taxation:1|collective_distribution:1|traditionalist_conservatism:1|Non_Interventionism:1|instrumentalism:1|disciplinarianism:1|legal_moralism:1|centralism:1"
+    },
+    "Old Left-Populism": {
+        "s": "state_socialism:0.5|Confiscatory_Taxation:0.4|conservatism:0.5|cultural_nationalism:0.5|representative_democracy:0.5|legal_moralism:0.4|agrarian_socialism:1|traditionalist_conservatism:1|Non_Interventionism:1|alter_globalism:1|industrialism:1|instrumentalism:1|centralism:1|regionalism:1"
+    },
+    "Left-State Liberalism": {
+        "s": "Progressive_Taxation:0.5|progressivism:0.5|Cosmopolitanism:0.6|Globalism:0.6|dirigisme:0.5|centralism:0.5|state_capitalism:1|postmodernism:1|autocracy:1|partocracy:1|instrumentalism:1|totalism:1|disciplinarianism:1|hypercentralism:1"
+    },
+    "American Technocracy": {
+        "s": "state_socialism:1|collective_distribution:1|progressivism:1|technocracy:1|civic_nationalism:1|Isolationism:1|prometheanism:1|civic_paternalism:1|federalism:1"
+    },
+    "Fabian Socialism": {
+        "s": "state_socialism:1|dirigisme:1|Progressive_Taxation:1|progressivism:1|representative_democracy:1|technocracy:1|civic_nationalism:1|Internationalism:1|post_industrialism:1|instrumentalism:1|civic_paternalism:1|municipalism:1"
+    },
+    "Ujamaa": {
+        "s": "agrarian_socialism:1|collective_distribution:1|progressive_conservatism:1|partocracy:1|pan_nationalism:1|Non_Interventionism:1|agrarianism:1|civic_paternalism:1|regionalism:1"
+    },
+    "Italian Left Communism": {
+        "s": "communization:0.7|collective_distribution:0.7|partocracy:0.6|Internationalism:1|representative_democracy:-0.8|laissez_faire:-1|progressivism:1|social_progressivism:1|Cosmopolitanism:1"
+    },
+    "Juche": {
+        "s": "state_socialism:0.8|collective_distribution:0.6|partocracy:0.8|autocracy:0.7|cultural_nationalism:0.7|Isolationism:0.7|regimentalism:0.6|laissez_faire:-1|conservatism:1|traditionalist_conservatism:1|reactionary_modernism:1|industrialism:1"
+    },
+    "Mao Zedong Thought": {
+        "s": "agrarian_socialism:0.7|collective_distribution:0.7|partocracy:0.8|laissez_faire:-1|representative_democracy:-0.7|social_progressivism:1|cultural_nationalism:1|civic_nationalism:1|Realpolitik:1"
+    },
+    "Marxism Leninism Maoism": {
+        "s": "agrarian_socialism:0.6|collective_distribution:0.7|partocracy:0.8|Internationalism:0.6|laissez_faire:-1|social_progressivism:1|pan_nationalism:1|Interventionism:1|alter_globalism:1"
+    },
+    "Trotskyism": {
+        "s": "state_socialism:0.5|collective_distribution:0.7|partocracy:0.5|Internationalism:1|Cosmopolitanism:0.5|laissez_faire:-1|social_progressivism:1"
+    },
+    "Marxism-Leninism": {
+        "s": "state_socialism:1|collective_distribution:0.8|partocracy:0.9|Internationalism:0.6|laissez_faire:-1|representative_democracy:-0.7|social_progressivism:1|civic_nationalism:1|Interventionism:1"
+    },
+    "Stalinism": {
+        "s": "state_socialism:1|collective_distribution:0.8|partocracy:0.8|autocracy:0.7|industrialism:0.8|totalism:0.6|centralism:0.8|hypercentralism:0.5|laissez_faire:-1|conservatism:1|cultural_nationalism:1|Realpolitik:1"
+    },
+    "Titoism": {
+        "s": "market_socialism:0.8|collective_distribution:0.5|federalism:0.8|Non_Interventionism:0.7|partocracy:0.6|laissez_faire:-1|social_progressivism:1|civic_nationalism:1|regionalism:1"
+    },
+    "Dengism": {
+        "s": "state_capitalism:0.7|partocracy:0.9|alternative_modernism:0.5|Realpolitik:0.6|centralism:0.5|civic_nationalism:0.5|industrialism:1|post_industrialism:1|disciplinarianism:1|regionalism:1"
+    },
+    "Luxemburgism": {
+        "s": "councilism:0.8|state_socialism:0.4|collective_distribution:0.6|Internationalism:1|Cosmopolitanism:0.6|laissez_faire:-1|partocracy:-0.6|social_progressivism:1"
+    },
+    "Eurocommunism": {
+        "s": "representative_democracy:0.8|civil_liberalism:0.5|Internationalism:0.4|Progressive_Taxation:0.5|partocracy:-0.7|market_socialism:1|Confiscatory_Taxation:1|social_progressivism:1|civic_nationalism:1"
+    },
+    "Hoxhaism": {
+        "s": "state_socialism:0.9|collective_distribution:0.8|partocracy:0.8|Isolationism:0.6|industrialism:0.5|laissez_faire:-1|conservatism:1|cultural_nationalism:1|totalism:1"
+    },
+    "Castroism": {
+        "s": "state_socialism:0.8|collective_distribution:0.7|partocracy:0.7|autocracy:0.5|Interventionism:0.5|cultural_nationalism:0.5|laissez_faire:-1|social_progressivism:1|industrialism:1"
+    },
+    "Guevarism": {
+        "s": "agrarian_socialism:0.5|collective_distribution:0.7|Interventionism:0.7|social_progressivism:0.4|Internationalism:0.8|laissez_faire:-1|autocracy:1"
+    },
+    "Cyber-Communism": {
+        "s": "state_socialism:0.7|collective_distribution:0.7|technocracy:0.6|prometheanism:0.6|Internationalism:0.6|social_progressivism:0.4|laissez_faire:-1"
+    },
+    "De Leonism": {
+        "s": "syndicalism:0.8|collective_distribution:0.6|industrialism:0.5|Internationalism:0.5|laissez_faire:-1|social_progressivism:1|councilism:1|syndicracy:1|Cosmopolitanism:1"
+    },
+    "National Communism": {
+        "s": "state_socialism:1|collective_distribution:1|social_progressivism:1|partocracy:1|cultural_nationalism:1|Realpolitik:1|ecomodernism:1|industrialism:1|civic_paternalism:1|disciplinarianism:1|centralism:1"
+    },
+    "Communalism": {
+        "s": "communalism:1|confederalism:0.8|free_socialism:0.6|environmentalism:0.8|communitarianism:0.6|collective_distribution:0.5|alter_globalism:0.4|centralism:-0.9|social_progressivism:1|Cosmopolitanism:1|Internationalism:1|municipalism:1"
+    },
+    "Minarcho-Socialism": {
+        "s": "minarchism:0.7|free_socialism:0.5|market_socialism:0.4|collective_distribution:0.4|Non_Interventionism:0.6|social_progressivism:0.4"
+    },
+    "Council Communism": {
+        "s": "communization:0.7|councilism:1|collective_distribution:0.6|Internationalism:0.8|partocracy:-1|state_socialism:-0.8|representative_democracy:-0.7|laissez_faire:-1|free_socialism:1|social_progressivism:1|Cosmopolitanism:1"
+    },
+    "Libertarian Socialism": {
+        "s": "free_socialism:0.8|collective_distribution:0.5|councilism:0.5|anarchism:0.5|social_progressivism:0.4|Internationalism:0.5|civil_libertarianism:0.7|partocracy:-1|totalism:-1|laissez_faire:-1|parecon:1|communalism:1|Cosmopolitanism:1|alter_globalism:1|municipalism:1|confederalism:1"
+    },
+    "Democratic Confederalism": {
+        "s": "communalism:0.9|confederalism:1|environmentalism:0.8|communitarianism:0.6|free_socialism:0.5|social_progressivism:0.7|civil_libertarianism:0.5|centralism:-1|hypercentralism:-1|parecon:1|collective_distribution:1|multiculturalism:1|alter_globalism:1|convivialism:1|municipalism:1"
+    },
+    "Guild Socialism": {
+        "s": "guild_socialism:1|councilism:0.4|communitarianism:0.5|laissez_faire:-0.9|collective_distribution:1|Progressive_Taxation:1|Confiscatory_Taxation:1|social_progressivism:1|Non_Interventionism:1|municipalism:1|confederalism:1|federalism:1"
+    },
+    "Eco-Socialism": {
+        "s": "environmentalism:1|conservationism:0.6|free_socialism:0.5|collective_distribution:0.6|communalism:0.5|Internationalism:0.5|laissez_faire:-1|industrialism:-0.6|social_progressivism:1"
+    },
+    "Fourierism": {
+        "s": "utopian_socialism:1|communalism:0.6|communitarianism:0.8|permissivism:0.7|social_progressivism:0.5|laissez_faire:-0.9|anarchism:1|alter_globalism:1"
+    },
+    "Gandhian Socialism": {
+        "s": "communitarianism:0.8|Non_Interventionism:0.6|neoluddism:0.6|distributism:0.5|agrarian_socialism:0.5|referendum_democracy:0.4|industrialism:-0.8|centralism:-0.9|market_socialism:1|religious_traditionalism:1|communalism:1|Internationalism:1|pacifism:1|agrarianism:1|convivialism:1|reputationalism:1|municipalism:1"
+    },
+    "Scythianism": {
+        "s": "agrarian_socialism:0.7|civilizationism:0.6|alternative_modernism:0.5|referendum_democracy:1|anarchism:1|permissivism:1"
+    },
+    "Proutism": {
+        "s": "market_socialism:0.4|collective_distribution:0.4|Cosmopolitanism:0.7|conservationism:0.6|civil_libertarianism:0.4|confederalism:0.5|progressivism:0.5|free_socialism:1|social_progressivism:1|referendum_democracy:1|Globalism:1|alter_globalism:1|municipalism:1"
+    },
+    "Geolibertarianism": {
+        "s": "lvt:1|laissez_faire:0.6|civil_liberalism:0.6|minarchism:0.7|civil_libertarianism:0.8|Non_Interventionism:0.5|state_socialism:-1|Globalism:1"
+    },
+    "Social Libertarianism": {
+        "s": "basic_income_capitalism:0.8|lvt:0.7|minarchism:0.5|civil_libertarianism:0.9|social_progressivism:0.5|Globalism:0.4|civic_nationalism:1"
+    },
+    "Helvetic Model": {
+        "s": "referendum_democracy:0.9|confederalism:0.6|federalism:0.6|armed_neutrality:0.8|civil_libertarianism:0.5|conservative_liberalism:0.4|civic_nationalism:0.4|ordnungspolitik:1|social_market:1|laissez_faire:1|civil_liberalism:1"
+    },
+    "Bleeding-Heart Libertarianism": {
+        "s": "minarchism:0.7|Voluntaryism:0.4|laissez_faire:0.6|basic_income_capitalism:0.4|civil_libertarianism:0.9|progressivism:0.4|Cosmopolitanism:0.7|Globalism:0.5|social_progressivism:1"
+    },
+    "Minarcho-Distributism": {
+        "s": "distributism:0.8|free_market_distributism:0.5|minarchism:0.7|communitarianism:0.7|traditionalist_conservatism:0.5|neoluddism:0.4"
+    },
+    "Pirate Politics": {
+        "s": "digital_democracy:0.9|civil_libertarianism:0.9|civil_liberalism:0.5|basic_income_capitalism:0.4|Cosmopolitanism:0.4|social_progressivism:1|Globalism:1|alter_globalism:1|prometheanism:1"
+    },
+    "Agorist Minarchism": {
+        "s": "countereconomics:0.9|minarchism:0.5|civil_libertarianism:0.9|civil_liberalism:0.5|Non_Interventionism:0.6|Voluntaryism:0.5"
+    },
+    "Communal Distributism": {
+        "s": "social_distributism:0.8|communalism:0.7|communitarianism:0.8|municipalism:0.5|confederalism:0.4|social_progressivism:0.4|alter_globalism:0.4"
+    },
+    "Yangism": {
+        "s": "basic_income_capitalism:1|progressivism:0.5|ecomodernism:0.4|civic_nationalism:0.4|representative_democracy:0.5|Progressive_Taxation:1|social_progressivism:1|Internationalism:1|Interventionism:1|civil_libertarianism:1|federalism:1"
+    },
+    "Libertarian Social Democracy": {
+        "s": "basic_income_capitalism:0.6|civil_libertarianism:0.8|social_progressivism:0.5|minarchism:0.5|lvt:0.5|Progressive_Taxation:0.4|environmentalism:0.4|Non_Interventionism:0.5|social_market:1|mixed_lvt:1|Cosmopolitanism:1|civic_nationalism:1|Globalism:1|instrumentalism:1|federalism:1"
+    },
+    "Progressive Helveticism": {
+        "s": "referendum_democracy:0.8|armed_neutrality:0.7|federalism:0.6|social_market:0.6|progressivism:0.5|environmentalism:0.5|civil_libertarianism:0.4|social_progressivism:1|civic_nationalism:1|communitarianism:1|ecomodernism:1|permissivism:1|confederalism:1"
+    },
+    "Cosmopolitan Distributism": {
+        "s": "social_distributism:1|collective_distribution:1|Progressive_Taxation:1|social_progressivism:1|communalism:1|Cosmopolitanism:1|alter_globalism:1|conservationism:1|environmentalism:1|permissivism:1|civil_libertarianism:1|municipalism:1"
+    },
+    "Cyber-Federalism": {
+        "s": "social_solidarity_economy:1|social_market:1|ordnungspolitik:1|flat_taxation:1|mixed_lvt:1|conservative_liberalism:1|civil_liberalism:1|digital_democracy:1|communitarianism:1|civic_nationalism:1|Realpolitik:1|armed_neutrality:1|ecomodernism:1|post_industrialism:1|permissivism:1|civil_libertarianism:1|federalism:1"
+    },
+    "Neolibertarianism": {
+        "s": "laissez_faire:0.8|minarchism:0.6|Interventionism:0.6|securitism:0.4|civic_nationalism:0.4|flat_taxation:0.5|civil_liberalism:0.5|civil_libertarianism:0.4|federalism:0.4"
+    },
+    "Libertarian Conservatism": {
+        "s": "laissez_faire:0.8|minarchism:0.6|conservatism:0.7|cultural_nationalism:0.5|Non_Interventionism:0.6|civil_libertarianism:0.6|flat_taxation:0.5|federalism:0.5|liberal_conservatism:1|conservative_liberalism:1|traditionalist_conservatism:1|representative_democracy:1"
+    },
+    "National Libertarianism": {
+        "s": "laissez_faire:0.7|minarchism:0.6|cultural_nationalism:0.6|Isolationism:0.6|securitism:0.5|flat_taxation:0.5|federalism:0.4|paleoconservatism:0.4|conservatism:1|ethnic_nationalism:1"
+    },
+    "Paleolibertarianism": {
+        "s": "laissez_faire:1|Voluntaryism:0.6|minarchism:0.4|paleoconservatism:0.5|communitarianism:0.4|Non_Interventionism:0.8|civil_libertarianism:0.6|confederalism:0.5|state_socialism:-1|traditionalist_conservatism:1|cultural_nationalism:1|federalism:1"
+    },
+    "Dark Enlightenment": {
+        "s": "neoreactionaryism:1|neocameralism:0.9|technocapitalism:0.7|securitism:0.4|cameralism:0.4|laissez_faire:0.5|representative_democracy:-1|referendum_democracy:-1|progressivism:-1|posthumanism:1|totalism:1|centralism:1|hypercentralism:1"
+    },
+    "Cyber-Libertarianism": {
+        "s": "civil_libertarianism:1|technocapitalism:0.6|laissez_faire:0.6|minarchism:0.5|Cosmopolitanism:0.5|Globalism:0.4|securitism:-0.9|civil_liberalism:1|Non_Interventionism:1|extropianism:1"
+    },
+    "Objectivism": {
+        "s": "egoism:1|laissez_faire:1|minarchism:0.8|civil_liberalism:0.6|Voluntaryism:0.4|state_socialism:-1|communitarianism:-1|collective_distribution:-1|religious_authoritarianism:-0.9|theocracy:-1|secular_humanism:1|Non_Interventionism:1|industrialism:1|civil_libertarianism:1"
+    },
+    "Fusionism": {
+        "s": "laissez_faire:0.8|traditionalist_conservatism:0.6|minarchism:0.5|civil_libertarianism:0.5|Interventionism:0.5|federalism:0.4|state_socialism:-1|communization:-1|representative_democracy:1|civic_nationalism:1|Realpolitik:1|industrialism:1"
+    },
+    "Minarcho-Avaritionism": {
+        "s": "laissez_faire:0.8|egoism:0.6|minarchism:0.5|permissivism:0.5|Voluntaryism:1|postmodernism:1|technocapitalism:1"
+    },
+    "Anarcho-Syndicalism": {
+        "s": "syndicalism:1|anarchism:0.9|collective_distribution:0.6|confederalism:0.6|Internationalism:0.8|industrialism:0.4|civil_libertarianism:0.5|laissez_faire:-1|partocracy:-1|representative_democracy:-0.9|centralism:-0.8|social_progressivism:1"
+    },
+    "Left-Agorism": {
+        "s": "countereconomics:0.8|anarchism:0.8|civil_libertarianism:0.7|social_progressivism:0.5|Cosmopolitanism:0.5|alter_globalism:0.4|municipalism:0.4|permissivism:0.4|collective_distribution:1|Voluntaryism:1|confederalism:1"
+    },
+    "Lys Noir": {
+        "s": "agrarian_socialism:0.4|reactionaryism:0.7|anarcho_monarchism:0.8|ethnic_nationalism:0.6|Isolationism:0.5|neoluddism:0.5|feudalism:1|romantic_nationalism:1|conservationism:1|legal_moralism:1|regionalism:1|confederalism:1"
+    },
+    "Anarcho-Communism": {
+        "s": "anarchism:1|communization:1|collective_distribution:0.9|confederalism:0.6|Internationalism:0.7|civil_libertarianism:0.6|laissez_faire:-1|partocracy:-1|representative_democracy:-1|social_progressivism:1|progressivism:1|Cosmopolitanism:1|communitarianism:1|alter_globalism:1|environmentalism:1|industrialism:1|permissivism:1|municipalism:1"
+    },
+    "Solarpunk Anarchism": {
+        "s": "anarchism:0.8|technogaianism:0.8|environmentalism:0.6|free_socialism:0.5|collective_distribution:0.4|alter_globalism:0.4|civil_libertarianism:0.5|Cosmopolitanism:0.5|social_progressivism:0.5|communalism:1|convivialism:1|permissivism:1|reputationalism:1|municipalism:1"
+    },
+    "Christian Anarchism": {
+        "s": "anarchism:0.9|Voluntaryism:0.6|religious_traditionalism:0.6|communitarianism:0.7|Non_Interventionism:0.8|civil_libertarianism:0.5|utopian_socialism:1|distributism:1|pacifism:1|reputationalism:1|municipalism:1"
+    },
+    "Insurrectionary Anarchism": {
+        "s": "anarchism:1|egoism:0.5|permissivism:0.5|Internationalism:0.5|civil_libertarianism:0.5|partocracy:-1|representative_democracy:-1|centralism:-1|communization:1|free_socialism:1|collective_distribution:1|postmodernism:1|social_progressivism:1|alter_globalism:1|municipalism:1"
+    },
+    "Catholic Workerism": {
+        "s": "anarchism:0.7|religious_traditionalism:0.7|communitarianism:0.8|Non_Interventionism:0.9|civil_libertarianism:0.4|laissez_faire:-1|mutual_distributism:1|utopian_socialism:1|collective_distribution:1|pacifism:1|agrarianism:1|convivialism:1|reputationalism:1|municipalism:1"
+    },
+    "Mutualism": {
+        "s": "mutualism:1|anarchism:0.6|confederalism:0.6|communitarianism:0.5|civil_libertarianism:0.5|laissez_faire:-0.8|state_socialism:-0.8|civil_liberalism:1|social_progressivism:1|alter_globalism:1|Internationalism:1"
+    },
+    "Market Anarchism": {
+        "s": "anarchism:1|Voluntaryism:0.8|civil_liberalism:0.6|civil_libertarianism:0.7|laissez_faire:0.5|Non_Interventionism:0.5|Cosmopolitanism:0.4|market_socialism:0.3|mutualism:1|alter_globalism:1|confederalism:1|municipalism:1"
+    },
+    "Mutualist Distributism": {
+        "s": "mutual_distributism:0.8|anarchism:0.6|communitarianism:0.7|civil_libertarianism:0.5|Non_Interventionism:0.4|municipalism:0.4|traditionalist_conservatism:1|social_progressivism:1|alter_globalism:1|confederalism:1"
+    },
+    "Panarchism": {
+        "s": "Voluntaryism:0.8|anarchism:0.5|civil_liberalism:0.6|laissez_faire:0.4|Cosmopolitanism:0.5|permissivism:0.5|Non_Interventionism:0.4|polycentrism:1"
+    },
+    "Geoanarchism": {
+        "s": "lvt:0.8|anarchism:0.9|laissez_faire:0.5|civil_liberalism:0.5|civil_libertarianism:0.6|Cosmopolitanism:0.4|Non_Interventionism:0.4|mutualism:1|alter_globalism:1|municipalism:1|confederalism:1"
+    },
+    "Green Anarchism": {
+        "s": "anarchism:1|environmentalism:0.9|conservationism:0.6|communitarianism:0.6|free_socialism:0.5|alter_globalism:0.5|civil_libertarianism:0.5|confederalism:0.4|industrialism:-0.7|collective_distribution:1|social_progressivism:1|municipalism:1"
+    },
+    "Anarcho-Primitivism": {
+        "s": "primitivism:1|anarchism:0.9|Tribalism:0.5|neoluddism:0.6|industrialism:-1|Globalism:-0.9|free_socialism:1|Isolationism:1|permissivism:1"
+    },
+    "Post-Anarchism": {
+        "s": "postmodernism:0.8|anarchism:0.9|free_socialism:0.4|Cosmopolitanism:0.4|alter_globalism:0.4|permissivism:0.5|civil_libertarianism:0.5|confederalism:0.4"
+    },
+    "Post-left": {
+        "s": "anarchism:0.9|egoism:0.6|postmodernism:0.5|neoluddism:0.4|permissivism:0.6|civil_libertarianism:0.5|partocracy:-1|representative_democracy:-1|communization:1|collective_distribution:1|amoralism:1"
+    },
+    "Anarcho-Transhumanism": {
+        "s": "anarchism:0.9|transhumanism:0.8|technogaianism:0.4|permissivism:0.5|free_socialism:0.4|civil_libertarianism:0.6|Cosmopolitanism:0.4|confederalism:0.3|mutualism:1|communization:1|social_progressivism:1"
+    },
+    "Ego-Communism": {
+        "s": "egoism:0.7|communization:0.6|collective_distribution:0.5|anarchism:0.9|permissivism:0.5|Internationalism:0.5|postmodernism:1|amoralism:1|alter_globalism:1|municipalism:1"
+    },
+    "National-Anarchism": {
+        "s": "anarchism:0.8|Tribalism:0.8|ethnic_nationalism:0.5|perennial_traditionalism:0.5|Isolationism:0.6|distributism:0.4|municipalism:0.4|Cosmopolitanism:-1|Globalism:-1|mutual_distributism:1|reactionaryism:1|neoluddism:1|legal_moralism:1|disciplinarianism:1"
+    },
+    "Ego-Mutualism": {
+        "s": "mutualism:1|postmodernism:1|civil_liberalism:1|anarchism:1|egoism:1|alter_globalism:1|Non_Interventionism:1|civil_libertarianism:1|permissivism:1|municipalism:1|confederalism:1"
+    },
+    "Anarcho-Capitalism": {
+        "s": "anarchism:1|laissez_faire:1|Voluntaryism:0.9|civil_liberalism:0.6|civil_libertarianism:0.8|Non_Interventionism:0.5|state_socialism:-1|communization:-1|countereconomics:1|polycentrism:1|Cosmopolitanism:1|Globalism:1|permissivism:1|confederalism:1|municipalism:1"
+    },
+    "Hoppeanism": {
+        "s": "laissez_faire:1|Voluntaryism:0.8|anarchism:0.6|paleoconservatism:0.4|communitarianism:0.5|Non_Interventionism:0.6|representative_democracy:-1|reactionaryism:1|anarcho_monarchism:1|Tribalism:1|Isolationism:1|disciplinarianism:1|municipalism:1|confederalism:1"
+    },
+    "Bleeding-Heart Anarcho-Capitalism": {
+        "s": "anarchism:0.9|laissez_faire:0.8|Voluntaryism:0.7|social_progressivism:0.5|Cosmopolitanism:0.6|Globalism:0.5|civil_libertarianism:0.7|progressivism:1|permissivism:1|confederalism:1"
+    },
+    "Free-Market Anarcho-Distributism": {
+        "s": "free_market_distributism:0.8|Voluntaryism:0.6|anarchism:0.8|communitarianism:0.6|civil_libertarianism:0.6|Non_Interventionism:0.4|traditionalist_conservatism:1|civil_liberalism:1|municipalism:1|confederalism:1"
+    },
+    "Traditionalist Anarcho-Distributism": {
+        "s": "distributism:0.8|Voluntaryism:0.6|religious_traditionalism:0.6|anarchism:0.8|communitarianism:0.7|Non_Interventionism:0.5|neoluddism:0.4|legal_moralism:0.4|traditionalist_conservatism:1|civil_libertarianism:1|municipalism:1|confederalism:1"
+    },
+    "Crypto-Anarchism": {
+        "s": "countereconomics:0.7|civil_libertarianism:1|anarchism:0.8|Voluntaryism:0.7|civil_liberalism:0.5|technocapitalism:0.5|Cosmopolitanism:0.5|Globalism:0.4|laissez_faire:0.5|Non_Interventionism:1|extropianism:1"
+    },
+    "Avaritionism": {
+        "s": "laissez_faire:0.8|egoism:0.8|anarchism:0.6|Voluntaryism:0.5|technocapitalism:0.5|permissivism:0.5|countereconomics:1|postmodernism:1|amoralism:1|polycentrism:1"
+    },
+    "Autarchism": {
+        "s": "egoism:0.6|anarchism:0.9|Voluntaryism:0.7|civil_liberalism:0.5|civil_libertarianism:0.8|laissez_faire:0.5|Isolationism:0.4|Non_Interventionism:1|permissivism:1"
+    },
+    "Agorism": {
+        "s": "countereconomics:1|Voluntaryism:1|civil_liberalism:1|anarchism:1|egoism:1|Cosmopolitanism:1|Non_Interventionism:1|civil_libertarianism:1|permissivism:1|confederalism:1|municipalism:1"
+    },
+    "Left-Accelerationism": {
+        "s": "prometheanism:0.8|collective_distribution:0.5|free_socialism:0.4|digital_democracy:0.3|Internationalism:0.6|social_progressivism:0.5|laissez_faire:-1|minarchism:1"
+    },
+    "Right-Accelerationism": {
+        "s": "technocapitalism:0.8|countereconomics:0.4|Voluntaryism:1|postmodernism:1|anarchism:1"
+    },
+    "Effective Accelerationism": {
+        "s": "technocapitalism:0.8|laissez_faire:0.8|prometheanism:0.6|extropianism:0.5|neoluddism:-1|progressivism:1|civil_liberalism:1|minarchism:1"
+    },
+    "Unconditional Accelerationism": {
+        "s": "techno_fatalism:0.9|laissez_faire:1|postmodernism:1|amoralism:1|anarchism:1|egoism:1"
+    },
+    "Neo-Libertarian Falangism": {
+        "s": "yellow_socialism:0.5|religious_traditionalism:0.5|minarchism:0.5|ethnic_nationalism:0.5|Imperialism:0.5|civil_libertarianism:0.4|industrialism:1|hypercentralism:1"
+    },
+    "Ingsoc": {
+        "s": "state_socialism:0.6|partocracy:1|totalism:1|hypercentralism:0.9|Imperialism:0.5|postmodernism:0.4|civil_libertarianism:-1|representative_democracy:-1|collective_distribution:1|industrialism:1"
+    },
+    "Neo-Bolshevism": {
+        "s": "state_socialism:0.9|collective_distribution:0.8|partocracy:0.9|industrialism:0.6|totalism:0.5|hypercentralism:0.5|Imperialism:1"
+    },
+    "Obliteration of the Self": {
+        "s": "totalism:1|hypercentralism:0.8|ethical_statism:0.6|state_socialism:0.5|alternative_modernism:1|Imperialism:1"
+    },
+    "World State Fordism": {
+        "s": "state_capitalism:0.6|technocracy:0.8|Globalism:1|transhumanism:0.6|hypercentralism:0.6|civil_libertarianism:-0.7|meritocracy:1|disciplinarianism:1|civic_paternalism:1"
+    },
+    "Gileadism": {
+        "s": "theocracy:1|religious_traditionalism:1|religious_nationalism:0.8|totalism:0.9|centralism:0.7|civil_libertarianism:-1|permissivism:-1|representative_democracy:-1|religious_authoritarianism:1"
+    },
+    "One State Benefactorism": {
+        "s": "totalism:1|hypercentralism:0.9|technocracy:0.6|autocracy:0.6|prometheanism:0.5|civil_libertarianism:-1|egoism:-1|progressivism:1|industrialism:1"
+    },
+    "Cyberpunk Corpostatism": {
+        "s": "laissez_faire:0.8|neocameralism:0.9|technocapitalism:0.7|securitism:0.6|transhumanism:0.5|corporatocracy:1|neoreactionaryism:1|egoism:1|Imperialism:1|confederalism:1"
+    },
+    "Fireman Statism": {
+        "s": "autocracy:0.5|totalism:0.6|centralism:0.5|civil_libertarianism:-1|state_capitalism:1|postmodernism:1|Isolationism:1|industrialism:1"
+    },
+    "Soylentism": {
+        "s": "state_capitalism:1|reactionary_modernism:1|autocracy:1|Isolationism:1|industrialism:1|totalism:1|centralism:1"
+    },
+    "Burgundian System": {
+        "s": "state_socialism:1|collective_distribution:1|reactionary_modernism:1|stratocracy:1|racial_nationalism:1|Isolationism:1|techno_fatalism:1|totalism:1|hypercentralism:1"
+    },
+    "Russian Imperial Cult": {
+        "s": "state_capitalism:1|Confiscatory_Taxation:1|religious_traditionalism:1|absolute:1|ethnic_nationalism:1|Isolationism:1|industrialism:1|disciplinarianism:1|hypercentralism:1"
+    }
+}
