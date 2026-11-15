@@ -21,4 +21,4 @@ Custom results allow direct selection of multiple values and save independently 
 
 FairTax remains in the values catalog and custom editor, but is omitted from quiz branches because neither release assigns it to an ideology profile. Selecting only FairTax in the custom editor produces no match.
 
-This fork also renames Legionarianism to Legionarism, replaces its Religious Authoritarianism and Religious Traditionalism matches with Ethical Statism and Alternative Modernism, and adds a moderate (+0.50) Constitutional Monarchy match.
+This fork also renames Legionarianism to Legionarism and customizes its positive and negative alignments. The current profile changes are documented in [CREDITS.md](./CREDITS.md).

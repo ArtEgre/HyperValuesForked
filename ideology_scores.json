@@ -48,7 +48,7 @@
         "s": "corporatism:1|religious_traditionalism:0.9|religious_authoritarianism:0.6|religious_nationalism:0.6|armed_neutrality:0.5|representative_democracy:-1|civil_liberalism:-0.9|communization:-1"
     },
     "Legionarism": {
-        "s": "religious_nationalism:1|alternative_modernism:1|ethical_statism:1|corporatism:0.7|regimentalism:1|centralism:0.5|social_corporatism:1|romantic_nationalism:1|constitutional:0.5|syndicalism:1|guild_socialism:0.5|cultural_nationalism:1|irredentism:1|Imperialism:0.5|religious_traditionalism:0.5|religious_authoritarianism:0.5"
+        "s": "religious_nationalism:1|alternative_modernism:1|ethical_statism:1|corporatism:0.7|regimentalism:1|centralism:0.5|social_corporatism:1|romantic_nationalism:1|constitutional:0.5|syndicalism:1|guild_socialism:0.5|cultural_nationalism:1|irredentism:1|Imperialism:0.5|religious_traditionalism:0.5|religious_authoritarianism:0.5|conservatism:-1|traditionalist_conservatism:-1|reactionaryism:-1|secular_humanism:-1|feudalism:-1|absolute:-1|representative_democracy:-1|laissez_faire:-1|meritocracy:1|syndicracy:1"
     },
     "Techno-Fascism": {
         "s": "transhumanism:0.8|reactionary_modernism:0.6|corporatism:0.5|ethical_statism:0.7|cultural_nationalism:0.6|Imperialism:0.5|civil_liberalism:-1|representative_democracy:-1"
