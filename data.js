@@ -647,11 +647,11 @@ const ideologies = {
         foreign: "Realpolitik"
     },
     "Legionarism": {
-        economics: ["corporatism", "social_corporatism"],
+        economics: ["corporatism", "social_corporatism", "syndicalism", "guild_socialism"],
         culture: "alternative_modernism",
         authority: ["ethical_statism", "constitutional"],
-        nation: ["religious_nationalism", "romantic_nationalism"],
-        social_control: "regimentalism",
+        nation: ["religious_nationalism", "romantic_nationalism", "cultural_nationalism"],
+        social_control: ["regimentalism", "disciplinarianism"],
         territorial_organization: "centralism"
     },
     "Peronism": {
@@ -4075,7 +4075,7 @@ const ideologyScores = {
     "Ecofascism": "conservationism:0.8|environmentalism:0.8|ethnic_nationalism:0.8|ethical_statism:0.6|Isolationism:0.6|industrialism:-0.7|laissez_faire:-0.7|Cosmopolitanism:-1|Globalism:-1|civil_liberalism:-0.8|dirigisme:1|reactionaryism:1|primitivism:1|totalism:1",
     "Sorelianism": "syndicalism:1|representative_democracy:-1|laissez_faire:-1|civil_liberalism:-0.8|state_socialism:-0.7|hierarchical_communism:1|alternative_modernism:1|ethical_statism:1|cultural_nationalism:1|Realpolitik:1",
     "Rexism": "corporatism:1|religious_traditionalism:0.9|religious_authoritarianism:0.6|religious_nationalism:0.6|armed_neutrality:0.5|representative_democracy:-1|civil_liberalism:-0.9|communization:-1",
-    "Legionarism": "religious_nationalism:1|alternative_modernism:0.9|ethical_statism:0.7|corporatism:0.7|regimentalism:0.6|centralism:0.5|laissez_faire:-0.7|civil_liberalism:-1|representative_democracy:-1|state_socialism:-0.8|communization:-1|social_corporatism:1|romantic_nationalism:1|constitutional:0.5",
+    "Legionarism": "religious_nationalism:1|alternative_modernism:0.9|ethical_statism:0.7|corporatism:0.7|regimentalism:0.6|centralism:0.5|laissez_faire:-0.7|civil_liberalism:-1|representative_democracy:-1|state_socialism:-0.8|communization:-1|social_corporatism:1|romantic_nationalism:1|constitutional:0.5|syndicalism:0.5|guild_socialism:0.5|cultural_nationalism:0.5|disciplinarianism:0.5",
     "Techno-Fascism": "transhumanism:0.8|reactionary_modernism:0.6|corporatism:0.5|ethical_statism:0.7|cultural_nationalism:0.6|Imperialism:0.5|civil_liberalism:-1|representative_democracy:-1",
     "National Solidarity": "yellow_socialism:0.7|autocracy:0.6|cultural_nationalism:0.7|laissez_faire:-0.9|communization:-0.9|civil_liberalism:-0.8|reactionary_modernism:1|Imperialism:1",
     "Cosmist Vanguardism": "extropianism:0.8|transhumanism:0.7|prometheanism:0.6|state_capitalism:1|alternative_modernism:1|ethical_statism:1|pan_nationalism:1",

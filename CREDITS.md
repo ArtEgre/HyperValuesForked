@@ -14,7 +14,7 @@ Recent integration and maintenance work used OpenAI Codex assistance. This does 
 
 ## Changes in this fork
 
-HyperValuesForked combines the supplied NeoValues 4.1 content, translations and assets with HyperValues' Bayesian scoring and signed profiles. It adds a separate custom-results editor, saved-answer cleanup, language support for the retained HyperValues screens, updated branding and source labels for AI-generated icons. Legionarism is renamed from Legionarianism; its profile replaces Religious Authoritarianism with Ethical Statism and Religious Traditionalism with Alternative Modernism, and adds Constitutional Monarchy at +0.50.
+HyperValuesForked combines the supplied NeoValues 4.1 content, translations and assets with HyperValues' Bayesian scoring and signed profiles. It adds a separate custom-results editor, saved-answer cleanup, language support for the retained HyperValues screens, updated branding and source labels for AI-generated icons. Legionarism is renamed from Legionarianism; its profile replaces Religious Authoritarianism with Ethical Statism and Religious Traditionalism with Alternative Modernism, and adds Constitutional Monarchy at +0.50. Its profile also adds moderate (+0.50) matches for Syndicalism, Guild Socialism, Cultural Nationalism and Disciplinarianism to increase its overlap with Revolutionary Nationalism.
 
 ## License
 
