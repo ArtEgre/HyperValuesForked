@@ -82,6 +82,69 @@ async function open(page) {
     w.HTMLAnchorElement.prototype.click = function () { w.downloaded.push(this.download); };
     const imageResult = await w.eval('HVImage.download(HV.loadAnswers(), 1)');
     check(imageResult.phone === 1 && imageResult.computer === 1 && w.downloaded.length === 2, 'phone and computer images render');
+    // Reproduce the crowded exports reported by the user, including both long category headings.
+    const denseAnswers = {
+        economics: ['corporatism', 'social_corporatism', 'syndicalism', 'guild_socialism', 'market_socialism', 'ordnungspolitik'],
+        resource_management: ['lvt'], culture: ['alternative_modernism', 'religious_traditionalism'],
+        authority: ['ethical_statism', 'meritocracy', 'syndicracy'],
+        nation: ['civic_nationalism', 'cultural_nationalism', 'religious_nationalism', 'romantic_nationalism'],
+        foreign: ['Imperialism', 'Realpolitik', 'irredentism'],
+        technology: ['prometheanism', 'extropianism', 'transhumanism'],
+        social_control: ['regimentalism', 'securitism', 'civic_paternalism', 'permissivism'],
+        territorial_organization: ['centralism', 'regionalism']
+    };
+    Object.keys(denseAnswers).forEach(cat => {
+        denseAnswers[cat] = denseAnswers[cat].map(value => ({value, agree:
+            ['religious_traditionalism', 'centralism', 'regionalism'].includes(value) ? 0.5 : 1}));
+    });
+    w.document.documentElement.setAttribute('data-theme', 'dark');
+    if (new URLSearchParams(location.search).has('previewFont')) {
+        const face = new w.FontFace('Quicksand', 'url(/__export_preview_font)', {weight: '300 700'});
+        await face.load();
+        w.document.fonts.add(face);
+    }
+    w.denseAnswers = denseAnswers;
+    const ranked = w.eval('HV.closestIdeologies(window.denseAnswers, null, 4)');
+    const icons = {};
+    await Promise.all(Object.entries(denseAnswers).flatMap(([cat, items]) => items.map(item => new Promise(resolve => {
+        const img = new w.Image();
+        img.onload = () => {icons[`${cat}/${item.value}`] = img; resolve();};
+        img.onerror = resolve;
+        img.src = `../icons/${cat}/${item.value}.svg`;
+    }))));
+    window.exportPreviews = {};
+    for (const lang of ['en', 'uk', 'ru', 'de']) {
+        w.eval(`I18n.setLanguage('${lang}')`);
+        for (const kind of ['phone', 'computer']) {
+            let headingCount = 0;
+            const makeCanvas = (width, height) => {
+                const canvas = w.document.createElement('canvas');
+                canvas.width = width; canvas.height = height;
+                const context = canvas.getContext('2d');
+                const fillText = context.fillText.bind(context);
+                const fillRect = context.fillRect.bind(context);
+                const texts = [];
+                context.fillText = function (text, x, y, ...rest) {
+                    texts.push({text, x, y, font: this.font, width: this.measureText(text).width});
+                    fillText(text, x, y, ...rest);
+                };
+                context.fillRect = function (x, y, width, height) {
+                    if (height <= 3) {
+                        headingCount++;
+                        const last = texts[texts.length - 1];
+                        for (let i = texts.length - 1; i >= 0 && texts[i].font === last.font && texts[i].x === x; i--) {
+                            if (texts[i].width > width + 0.1) throw new Error(`${lang} ${kind}: heading overflows: ${texts[i].text}`);
+                        }
+                    }
+                    fillRect(x, y, width, height);
+                };
+                return canvas;
+            };
+            const canvas = w.eval('HVImage').draw(kind, denseAnswers, ranked, icons, makeCanvas, 1);
+            check(headingCount === 9, `${lang} ${kind}: all category headings fit their columns`);
+            if (lang === 'en') window.exportPreviews[kind] = canvas.toDataURL('image/png');
+        }
+    }
     check(w.document.documentElement.scrollWidth <= w.innerWidth + 1, 'mobile results fit the viewport');
     report.textContent = output.join('\n') + '\nALL BROWSER CHECKS PASSED';
 })().catch(error => { report.textContent = output.join('\n') + '\nFAIL ' + error.stack; });

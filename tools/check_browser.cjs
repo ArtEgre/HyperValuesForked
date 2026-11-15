@@ -13,6 +13,11 @@ const profile = fs.mkdtempSync(path.join(os.tmpdir(), 'hypervalues-browser-'));
 const wait = ms => new Promise(resolve => setTimeout(resolve, ms));
 const mime = {'.html': 'text/html', '.js': 'text/javascript', '.json': 'application/json', '.css': 'text/css', '.svg': 'image/svg+xml', '.png': 'image/png'};
 const server = http.createServer((req, res) => {
+    if (req.url === '/__export_preview_font' && process.env.HV_EXPORT_FONT) {
+        res.setHeader('Content-Type', 'font/ttf');
+        fs.createReadStream(process.env.HV_EXPORT_FONT).pipe(res);
+        return;
+    }
     const file = path.resolve(root, '.' + decodeURIComponent(new URL(req.url, 'http://localhost').pathname));
     if (!file.startsWith(root + path.sep)) { res.writeHead(403); return res.end(); }
     fs.readFile(file, (error, body) => {
@@ -45,7 +50,7 @@ let child, ws;
         pending.set(key, message => message.error ? reject(new Error(JSON.stringify(message.error))) : resolve(message.result));
         ws.send(JSON.stringify({id: key, method, params}));
     });
-    await call('Page.navigate', {url: `http://127.0.0.1:${server.address().port}/tools/browser_check.html`});
+    await call('Page.navigate', {url: `http://127.0.0.1:${server.address().port}/tools/browser_check.html${process.env.HV_EXPORT_FONT ? '?previewFont=1' : ''}`});
     let report = '';
     for (let i = 0; i < 300; i++) {
         await wait(200);
@@ -54,6 +59,15 @@ let child, ws;
         if (report.includes('FAIL ') || report.includes('ALL BROWSER CHECKS PASSED')) break;
     }
     console.log(report);
+    if (process.env.HV_EXPORT_PREVIEWS && report.includes('ALL BROWSER CHECKS PASSED')) {
+        const previews = await call('Runtime.evaluate', {expression: 'window.exportPreviews', returnByValue: true});
+        const directory = path.resolve(process.env.HV_EXPORT_PREVIEWS);
+        fs.mkdirSync(directory, {recursive: true});
+        for (const [kind, data] of Object.entries(previews.result.value)) {
+            fs.writeFileSync(path.join(directory, `hypervaluesforked-${kind}.png`), Buffer.from(data.split(',')[1], 'base64'));
+        }
+        console.log('Export previews saved to ' + directory);
+    }
     if (!report.includes('ALL BROWSER CHECKS PASSED')) process.exitCode = 1;
 })().catch(error => {console.error(error); process.exitCode = 1;}).finally(async () => {
     if (ws) ws.close();

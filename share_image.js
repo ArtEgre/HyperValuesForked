@@ -54,7 +54,7 @@ const HVImage = (function () {
         return tokens;
     }
 
-    // Lines of text for a fixed font size; a piece wider than maxWidth stays on its own line
+    // Wrap at spaces and hyphens; split an oversized word to keep translated headings inside their column.
     function wrapFixed(ctx, text, maxWidth, px, weight) {
         ctx.font = font(weight, px);
         const lines = [];
@@ -66,6 +66,13 @@ const HVImage = (function () {
                 current = token.text;
             } else {
                 current = test;
+            }
+            while (ctx.measureText(current).width > maxWidth && Array.from(current).length > 1) {
+                const letters = Array.from(current);
+                let end = 1;
+                while (end < letters.length && ctx.measureText(letters.slice(0, end + 1).join('')).width <= maxWidth) end++;
+                lines.push(letters.slice(0, end).join(''));
+                current = letters.slice(end).join('');
             }
         });
         if (current) lines.push(current);
@@ -154,19 +161,20 @@ const HVImage = (function () {
                 maxLines = Math.max(maxLines, wrapFixed(ctx, item.name, textW, fName, BOLD).length);
             }));
             const fTitle = fName * 1.3;
-            const titleH = fTitle + 22 * s;
             const textH = maxLines * fName * 1.15 + fName * 1.25;
             const rowH = Math.max((ICON + 14) * s, textH) + 12 * s;
             const heights = new Array(columns).fill(0);
             const placed = blocks.map(block => {
+                const titleLines = wrapFixed(ctx, block.title, colW, fTitle, BOLD);
+                const titleH = fTitle + (titleLines.length - 1) * fTitle * 1.15 + 22 * s;
                 let col = 0;
                 heights.forEach((h, i) => { if (h < heights[col]) col = i; });
                 const rows = Math.ceil(block.items.length / perRow);
                 const y = heights[col];
                 heights[col] += titleH + rows * rowH + BLOCK_GAP * s;
-                return { block, col, y };
+                return { block, col, y, titleLines, titleH };
             });
-            result = { s, columns, perRow, colW, cell, side, textW, fName, fTitle, titleH, maxLines, rowH, placed,
+            result = { s, columns, perRow, colW, cell, side, textW, fName, fTitle, maxLines, rowH, placed,
                 height: Math.max.apply(null, heights) - BLOCK_GAP * s };
             if (result.height <= region.h) break;
         }
@@ -227,13 +235,15 @@ const HVImage = (function () {
             ctx.textAlign = 'left';
             ctx.textBaseline = 'alphabetic';
             ctx.font = font(BOLD, plan.fTitle);
-            ctx.fillText(p.block.title, x0, y0 + plan.fTitle);
+            p.titleLines.forEach((line, index) => {
+                ctx.fillText(line, x0, y0 + plan.fTitle + index * plan.fTitle * 1.15);
+            });
             ctx.fillStyle = th.border;
-            ctx.fillRect(x0, y0 + plan.fTitle + 8 * plan.s, plan.colW, Math.max(1, 2 * plan.s));
+            ctx.fillRect(x0, y0 + p.titleH - 14 * plan.s, plan.colW, Math.max(1, 2 * plan.s));
             p.block.items.forEach((item, i) => {
                 const col = i % plan.perRow;
                 const row = Math.floor(i / plan.perRow);
-                drawTile(ctx, th, icons, p.block.category, item, x0 + col * plan.cell, y0 + plan.titleH + row * plan.rowH, plan);
+                drawTile(ctx, th, icons, p.block.category, item, x0 + col * plan.cell, y0 + p.titleH + row * plan.rowH, plan);
             });
         });
     }
